@@ -1,0 +1,800 @@
+[
+  {
+    "agent_data": {
+      "type": "VEHICLE",
+      "position": [
+        665.0342407226562,
+        -2207.51220703125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.0166751146316528,
+      "size": [
+        4.39132833480835,
+        1.8138303756713867,
+        1.5909757614135742
+      ],
+      "track_id": 1
+    },
+    "generated_scenario": " \nFeature: Vehicle Position\nScenario: Vehicle Stops at a Specific Location\n  Given the vehicle is located at position [665.0342407226562, -2207.51220703125]\n  When the vehicle's velocity is set to 0 and its heading is 1.0166751146316528\n  Then the vehicle should be located at a position close to the given position after the actions are taken\n\nFeature: Vehicle Velocity\nScenario: Vehicle Changes Velocity to 0\n  Given the vehicle's velocity is [velocity]\n  When the vehicle's velocity is set to 0\n  Then the vehicle's velocity should be 0 after the action is taken\n\nFeature: Vehicle Heading\nScenario: Vehicle Changes Heading\n  Given the vehicle's heading is [heading]\n  When the vehicle's heading is set to [new heading]\n  Then the vehicle's heading should be [new heading] after the action is taken\n\nPlease note that these scenarios are based on the given position, velocity, and heading. If the initial conditions differ, the scenarios should be adjusted accordingly."
+  },
+  {
+    "agent_data": {
+      "type": "VEHICLE",
+      "position": [
+        717.6612548828125,
+        -2173.760009765625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": -0.7832239866256714,
+      "size": [
+        5.150925159454346,
+        1.9530917406082153,
+        2.040210008621216
+      ],
+      "track_id": 2
+    },
+    "generated_scenario": " \nFeature: Vehicle State\nScenario: Vehicle Stops at a Red Light\n  Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714]\n  When the vehicle's headlights illuminate the red light\n  Then the vehicle's velocity remains [0.0, 0.0] and its heading remains [-0.7832239866256714]\n  When the vehicle's headlights are no longer illuminating the red light\n  Then the vehicle's velocity changes to [0.0, -10.0] and its heading remains [-0.7832239866256714]\n  And the vehicle comes to a complete stop at a safe distance from the intersection\n  And the vehicle's state matches the expected state after stopping at a red light\n\nFeature: Environmental Conditions\nScenario: Clear Weather\n  Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714]\n  When the weather is clear\n  Then the driver can see the road, other vehicles, and pedestrians clearly\n  And there are no adverse weather conditions that could affect the vehicle's operation\n\nThese scenarios can be used to test the vehicle's behavior when stopping at a red light and its ability to navigate in clear weather conditions."
+  },
+  {
+    "agent_data": {
+      "type": "VEHICLE",
+      "position": [
+        730.681396484375,
+        -2180.678955078125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": -0.3217470049858093,
+      "size": [
+        2.948282480239868,
+        1.4842174053192139,
+        1.1125067472457886
+      ],
+      "track_id": 3
+    },
+    "generated_scenario": " \nFeature: Vehicle Movement\nScenario: Vehicle Stops at a Specific Position\n  Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]\n  When the vehicle's throttle is pressed to the maximum\n  Then the vehicle should stop at the same position with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]\n\nFeature: Vehicle Heading\nScenario: Vehicle Changes Direction\n  Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]\n  When the vehicle's steering wheel is turned by [0.1 radians]\n  Then the vehicle should change its heading to [0.1 radians] with a velocity of [0.0, 0.0]\n\nFeature: Vehicle Velocity\nScenario: Vehicle Accelerates or Decelerates\n  Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]\n  When the vehicle's throttle is pressed slightly\n  Then the vehicle should accelerate slightly with a new velocity of [0.1, 0.0]\n  When the vehicle's throttle is released slightly\n  Then the vehicle should decelerate slightly with a new velocity of [0.0, 0.1]"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        671.2536010742188,
+        -2204.745361328125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.7855009436607361,
+      "size": [
+        1.7067023515701294,
+        0.9287868142127991,
+        0.6282157897949219
+      ],
+      "track_id": 4
+    },
+    "generated_scenario": " \nHere are some test scenarios for a pedestrian agent:\n\n---\n\n| Feature                  | Description                                                 |\n| -------------------------- | ------------------------------------------------------------- |\n| Position                 | The pedestrian is located at position [671.2536010742188, -2204.745361328125] |\n| Velocity                 | The pedestrian's velocity is [0.0, 0.0]                                   |\n| Heading                   | The pedestrian's heading is 0.7855009436607361                         |\n\n---\n\nScenario: Pedestrian crosses the street\n\nGiven:\n- The pedestrian is at the corner of Main Street and Oak Avenue.\n- There is a green light for the pedestrian to cross the street.\n\nWhen:\n- The pedestrian steps onto the crosswalk.\n- The pedestrian continues walking until they reach the other side of the street.\n\nThen:\n- The pedestrian is on the other side of the street.\n- The pedestrian's velocity is [0.0, 0.0] and heading is [0.0, 0.0].\n\n---\n\nScenario: Pedestrian waits at a red light\n\nGiven:\n- The pedestrian is at an intersection with a red light.\n- The pedestrian is not on the crosswalk.\n\nWhen:\n- The pedestrian remains standing.\n- The pedestrian's velocity is [0.0, 0.0] and heading is [0.0, 0.0].\n\nThen:\n- The pedestrian is still standing at the intersection.\n- The pedestrian's velocity is [0.0, 0.0] and heading is [0.0, 0.0].\n\n---\n\nScenario: Pedestrian avoids an obstacle\n\nGiven:\n- The pedestrian is walking on a sidewalk.\n- Suddenly, a toy car appears in front of the pedestrian.\n"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        669.7763061523438,
+        -2213.004638671875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.4923592805862427,
+      "size": [
+        0.25109943747520447,
+        0.6343780755996704,
+        1.6543769836425781
+      ],
+      "track_id": 5
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\nScenario: Pedestrian crosses the street\n  Given: The pedestrian is at position [669.7763061523438, -2213.004638671875] with velocity [0.0, 0.0] and heading 1.4923592805862427\n  When: The pedestrian changes heading to -1.7126747048247097 and steps forward by 1.0 meter\n  Then: The pedestrian's position is approximately at [669.8165410924023, -2212.999839493164] and they are facing the direction of -1.7126747048247097\n\nFeature: Vehicle behavior\nScenario: Vehicle approaches and stops at the intersection\n  Given: A vehicle is approaching the intersection at a moderate speed\n  When: The vehicle's sensor system detects the presence of a pedestrian at the intersection\n  Then: The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding\n\nFeature: Pedestrian-vehicle interaction\nScenario: Pedestrian and vehicle interact at the intersection\n  Given: The pedestrian crosses the street as described in the previous scenario\n  When: The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding\n  Then: The vehicle's driver acknowledges the pedestrian's presence and allows them to cross the street safely\n  And: The pedestrian and vehicle continue their respective paths without any accidents or conflicts\n\nThese scenarios aim to cover the basic movements of a pedestrian and a vehicle at an intersection, ensuring safe and smooth interaction between them."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        672.4368286132812,
+        -2203.173095703125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.0996601581573486,
+      "size": [
+        1.2584959268569946,
+        0.9977360963821411,
+        0.6544991135597229
+      ],
+      "track_id": 6
+    },
+    "generated_scenario": " \nFeature: Pedestrian's position\nScenario: Pedestrian remains at a standstill at a specific location\n  Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486\n  When: The agent performs no actions (i.e., no external forces act on the pedestrian)\n  Then: The pedestrian remains at the same position, with a velocity of [0.0, 0.0] and heading of 1.0996601581573486\n\nFeature: Pedestrian's velocity\nScenario: Pedestrian changes velocity to zero\n  Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486\n  When: The agent applies a force to the pedestrian in the direction of zero velocity\n  Then: The pedestrian's velocity becomes [0.0, 0.0]\n\nFeature: Pedestrian's heading\nScenario: Pedestrian changes heading\n  Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486\n  When: The agent applies a force to the pedestrian in a new direction\n  Then: The pedestrian's heading changes to the new direction\n\nThese scenarios assume that the agent is an autonomous vehicle and will act accordingly to maintain safety and follow traffic rules"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        673.4970092773438,
+        -2202.22412109375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.7069611549377441,
+      "size": [
+        0.7371888756752014,
+        0.6978949904441833,
+        0.3708972632884979
+      ],
+      "track_id": 7
+    },
+    "generated_scenario": " \nFeature: Pedestrian motion\n\nScenario: Pedestrian crosses the street\n\n  Given:\n    - Pedestrian is at position [673.4970092773438, -2202.22412109375]\n    - Pedestrian's velocity is [0.0, 0.0]\n    - Pedestrian's heading is 0.7069611549377441\n  When:\n    - Pedestrian takes a step forward with velocity [0.0, 0.25]\n    - Pedestrian's position changes to [673.5379921635429, -2202.260122802738]\n  Then:\n    - Pedestrian's velocity is [0.0, 0.25]\n    - Pedestrian's heading is still 0.7069611549377441\n    - Pedestrian's position is [673.5379921635429, -2202.260122802738]\n\nScenario: Pedestrian changes direction and stops\n\n  Given:\n    - Pedestrian is at position [673.4970092773438, -2202.22412109375]\n    - Pedestrian's velocity is [0.0, 0.0]\n    - Pedestrian's heading is 0.7069611549377441\n  When:\n    - Pedestrian takes a step backward with velocity [0.0, -0.25]\n    - Pedestrian's position changes to [673.4379921635429, -2202.22412109375]\n  Then:\n    - Pedestrian's velocity"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        674.9345703125,
+        -2199.549072265625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.7855009436607361,
+      "size": [
+        1.336581826210022,
+        0.5598613023757935,
+        0.4427871108055115
+      ],
+      "track_id": 8
+    },
+    "generated_scenario": " \nFeature: Pedestrian Movement\nScenario: Pedestrian Crosses Street\n  Given: The pedestrian is at position [674.9345703125, -2199.549072265625] with zero velocity and heading 0.7855009436607361.\n  When: The pedestrian crosses the street by changing velocity to [0.5, 0.5] and heading to -0.7855009436607361.\n  Then: The pedestrian is at position [675.11694306640625, -2199.7140637205078] with a velocity of [0.5, 0.5] and heading to -0.7855009436607361.\n  And: The surrounding vehicles have been notified of the pedestrian's movement and adjust their driving accordingly."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        676.89404296875,
+        -2195.829833984375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.9425805807113647,
+      "size": [
+        0.5533680319786072,
+        0.6151512861251831,
+        0.38068199157714844
+      ],
+      "track_id": 9
+    },
+    "generated_scenario": " \nFeature: Pedestrian Movement\n\nScenario: Pedestrian Crosses Street\n\n  Given:\n    The pedestrian is located at position [676.89404296875, -2195.829833984375] with a velocity of [0.0, 0.0] and heading of 0.9425805807113647.\n\n  When:\n    The pedestrian decides to cross the street.\n\n  Then:\n    The pedestrian's position changes to a new position determined by the autonomous vehicle's sensor data and motion planning algorithms. The pedestrian's velocity and heading may also change based on the autonomous vehicle's responses and traffic conditions."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        680.79296875,
+        -2196.760009765625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.7855009436607361,
+      "size": [
+        0.6284242272377014,
+        0.15439918637275696,
+        1.6238592863082886
+      ],
+      "track_id": 10
+    },
+    "generated_scenario": " \nHere are some BDD-style test scenarios for a pedestrian agent:\n\nFeature: Pedestrian Movement\nScenario: Crossing the Street\n  Given the pedestrian is at the corner of Main and Elm streets, looking to cross.\n  When the pedestrian steps onto the crosswalk, facing the oncoming traffic.\n  Then the pedestrian should be able to continue walking straight ahead.\n\nFeature: Pedestrian Following the Route\nScenario: Navigating a Complex Intersection\n  Given the pedestrian is at an intersection with multiple roads, looking to navigate to the right.\n  When the pedestrian presses the \"right\" button on the device.\n  Then the pedestrian should follow the correct route and continue walking.\n\nFeature: Pedestrian Interaction with Obstacles\nScenario: Encountering a Barrier\n  Given the pedestrian is walking along a path, suddenly encounters a low barrier.\n  When the pedestrian tries to step over the barrier.\n  Then the pedestrian should be able to detect the barrier, stop, and resume walking once the barrier is passed.\n\nFeature: Pedestrian Interaction with Other Agents\nScenario: Walking Near a Car\n  Given the pedestrian is walking along a sidewalk, a car approaches from the opposite direction.\n  When the pedestrian notices the car and steps off the sidewalk to avoid it.\n  Then the pedestrian should be able to safely return to the sidewalk once the car has passed.\n\nThese scenarios cover basic movements, navigation, and interaction with obstacles and other agents. You can extend these scenarios to include more complex situations and test the pedestrian agent's behavior in various scenarios."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        681.1609497070312,
+        -2190.373046875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.00010278765694238245,
+      "size": [
+        0.6583710312843323,
+        1.2080687284469604,
+        0.5711459517478943
+      ],
+      "track_id": 11
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\nScenario: Pedestrian staying still\n  Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245\n  When: The agent does not perform any actions (i.e., it stays still)\n  Then: The pedestrian's position remains at approximately [681.1609497070312, -2190.373046875] and its velocity remains [0.0, 0.0]\n\nFeature: Pedestrian movement\nScenario: Pedestrian moving in a specific direction\n  Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245\n  When: The agent moves in the positive x-direction (i.e., to the right)\n  Then: The pedestrian's position moves to a new location, and its velocity becomes [0.0, 0.00010278765694238245]\n\nFeature: Pedestrian movement\nScenario: Pedestrian changing direction\n  Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.00010278765694238245] and heading 0.00010278765694238245\n  When: The agent changes its heading to a new value\n  Then: The pedestrian'"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        686.0689086914062,
+        -2182.83544921875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.15718242526054382,
+      "size": [
+        0.6018899083137512,
+        0.8067646622657776,
+        0.4510231018066406
+      ],
+      "track_id": 12
+    },
+    "generated_scenario": " \nFeature: Pedestrian motion\nScenario: Pedestrian at rest\n  Given: The pedestrian is at rest at position [686.0689086914062, -2182.83544921875] with a velocity of [0.0, 0.0] and heading of 0.15718242526054382.\n  When: An autonomous vehicle approaches the pedestrian at a distance of 10 meters.\n  Then: The pedestrian remains at rest and the autonomous vehicle does not collide with the pedestrian."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        713.8087768554688,
+        -2174.413818359375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.15718242526054382,
+      "size": [
+        0.7209942936897278,
+        1.1404223442077637,
+        0.7115211486816406
+      ],
+      "track_id": 13
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\nScenario: Pedestrian crosses the street\n  Given: The pedestrian is at position [713.8087768554688, -2174.413818359375] with velocity [0.0, 0.0] and heading 0.15718242526054382\n  When: The pedestrian starts to cross the street by moving their head towards the opposite direction\n  Then: The pedestrian's position changes to a new position, and the velocity becomes [0.2, 0.0] with a heading towards the opposite direction\n  And: The pedestrian's position is within the crossing zone of the street\n\nFeature: Vehicle behavior\nScenario: Vehicle approaches the pedestrian\n  Given: A vehicle is approaching the pedestrian's crossing zone\n  When: The vehicle's sensor detects the pedestrian\n  Then: The vehicle stops and waits for the pedestrian to cross the street\n  And: The pedestrian finishes crossing the street before the vehicle moves again"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        686.8765869140625,
+        -2181.53955078125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.23572224378585815,
+      "size": [
+        0.7559199333190918,
+        0.7600790858268738,
+        0.4586029350757599
+      ],
+      "track_id": 14
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian walks in a straight line\n\nGiven:\n- A pedestrian is located at position [686.8765869140625, -2181.53955078125] with velocity [0.0, 0.0] and heading 0.23572224378585815.\n\nWhen:\nThe pedestrian starts walking in a straight line.\n\nThen:\nThe pedestrian's position changes according to their velocity and heading, and they remain within a reasonable distance from the given position."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        690.985595703125,
+        -2181.589111328125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.6284213066101074,
+      "size": [
+        3.352738857269287,
+        1.2523163557052612,
+        0.5900993347167969
+      ],
+      "track_id": 15
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian crosses the street\n\n  Given:\n    - Pedestrian is at position [690.985595703125, -2181.589111328125]\n    - Pedestrian has a velocity of [0.0, 0.0]\n    - Pedestrian is facing a heading of 0.6284213066101074\n  When:\n    - Pedestrian crosses the street (action)\n  Then:\n    - Pedestrian moves to a new position (expected result)\n    - The new position should be in the opposite direction of the initial position\n    - The velocity and heading of the pedestrian should remain [0.0, 0.0] and 0.6284213066101074, respectively"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        687.9076538085938,
+        -2179.499755859375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.23572224378585815,
+      "size": [
+        0.83254474401474,
+        0.5919377207756042,
+        0.3626518249511719
+      ],
+      "track_id": 16
+    },
+    "generated_scenario": " \nFeature: Pedestrian's position\nScenario: Pedestrian remains at a specific location\n  Given the pedestrian is located at position [687.9076538085938, -2179.499755859375]\n  When the pedestrian does not move\n  Then the pedestrian's position remains at [687.9076538085938, -2179.499755859375]\n\nFeature: Pedestrian's velocity\nScenario: Pedestrian changes velocity to zero\n  Given the pedestrian's velocity is [0.0, 0.0]\n  When the pedestrian changes velocity to zero\n  Then the pedestrian's velocity is now [0.0, 0.0]\n\nFeature: Pedestrian's heading\nScenario: Pedestrian changes heading\n  Given the pedestrian's heading is 0.23572224378585815\n  When the pedestrian changes heading\n  Then the pedestrian's heading is now [0.23572224378585815]"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        694.6976318359375,
+        -2175.463623046875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.0211204290390015,
+      "size": [
+        2.087313413619995,
+        3.3988037109375,
+        1.9073907136917114
+      ],
+      "track_id": 17
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian walks straight\n\nGiven:\n- A pedestrian is located at position [694.6976318359375, -2175.463623046875] with velocity [0.0, 0.0] and heading 1.0211204290390015.\n\nWhen:\n- The pedestrian continues walking straight along the street.\n\nThen:\n- The pedestrian's position should update according to their straight-line motion. The new position should be approximately at [695.8192934023438, -2176.259309270507]. The velocity should remain [0.0, 0.0], and the heading should still be 1.0211204290390015."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        691.4769897460938,
+        -2174.4951171875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.413819432258606,
+      "size": [
+        0.5869629383087158,
+        0.6723687648773193,
+        0.38638684153556824
+      ],
+      "track_id": 18
+    },
+    "generated_scenario": " \nFeature: Pedestrian Movement\nScenario: Pedestrian Crosses Street\n  Given: A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606.\n  When: The pedestrian decides to cross the street.\n  Then: The pedestrian's velocity becomes non-zero and points in the opposite direction of the crosswalk, and their heading changes to the angle of the crosswalk.\n\nFeature: Pedestrian Obstacle Encounter\nScenario: Pedestrian Avoids Obstacle\n  Given: A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606. An obstacle is at position [694.2472297004123, -2178.319439970997].\n  When: The pedestrian notices the obstacle.\n  Then: The pedestrian's velocity becomes zero, and they quickly change direction to avoid the obstacle.\n\nPlease note that these scenarios are hypothetical and should be replaced with realistic scenarios based on the actual behavior of the pedestrian and the presence of obstacles in the environment."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        702.4561157226562,
+        -2164.29248046875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.7069611549377441,
+      "size": [
+        1.828010082244873,
+        4.726919651031494,
+        1.2972420454025269
+      ],
+      "track_id": 19
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\nScenario: Pedestrian walks in a straight line\n  Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441\n  When: The pedestrian starts walking in a straight line\n  Then: The pedestrian's position is updated to [702.6047451413707, -2164.337573104992] and their velocity is set to [0.2, 0.2]\n\nFeature: Pedestrian interaction with obstacles\nScenario: Pedestrian avoids an obstacle\n  Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441\n  When: The pedestrian encounters an obstacle at position [702.29248046875, -2166.29248046875]\n  Then: The pedestrian changes direction to avoid the obstacle and their position is updated to [702.043015931227, -2166.337573104992]\n\nFeature: Pedestrian interaction with intersections\nScenario: Pedestrian crosses an intersection\n  Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        689.9425048828125,
+        -2148.4169921875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.3142620623111725,
+      "size": [
+        0.8026154041290283,
+        0.9424880146980286,
+        0.7546271085739136
+      ],
+      "track_id": 20
+    },
+    "generated_scenario": " \nFeature: Pedestrian motion\nScenario: Pedestrian crosses the street\n  Given the pedestrian is at position [689.9425048828125, -2148.4169921875] and heading towards the crosswalk\n  When the pedestrian notices the green light and steps into the crosswalk\n  Then the pedestrian's position changes to [804.3249610689128, -2146.333283018223]\n  And the pedestrian's heading is now at 0.3142620623111725\n  And the vehicle at position [804.3249610689128, -2146.333283018223] notices the pedestrian and stops\n  And the vehicle's heading changes to -1.246071499606943\n  And the pedestrian waits for the vehicle to pass by before continuing to walk\n  And the pedestrian's position changes to [1002.3042176025225, -2144.077345443371]\n  And the pedestrian's heading is now at 0.3142620623111725\n  And the vehicle at position [1002.3042176025225, -2144.077345443371] notices the pedestrian and stops\n  And the vehicle's heading changes to -1.246071499606943\n  And the pedestrian finishes crossing the street safely\n\nThis scenario tests the pedestrian's ability to cross the street and ensure that vehicles approaching from both directions stop to allow the pedestrian to pass by safely. The scenario also tests the vehicle's ability to detect and react to"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        686.2042236328125,
+        -2157.621337890625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.4923592805862427,
+      "size": [
+        0.5916253924369812,
+        0.593435525894165,
+        0.5634117126464844
+      ],
+      "track_id": 21
+    },
+    "generated_scenario": " \nHere are some test scenarios for a pedestrian agent:\n\n1. **Test Scenario 1: Pedestrian Stops at a Crosswalk**\n   Feature: Pedestrian stops at a crosswalk\n   Scenario: A pedestrian is at position [686.2042236328125, -2157.621337890625] with a velocity of [0.0, 0.0] and heading 1.4923592805862427. An intersection is located at position [687.6711743164062, -2156.8109143046875]. The crosswalk is at the intersection.\n   Given:\n   - The pedestrian's position and velocity are as specified.\n   - The intersection has a crosswalk.\n   When:\n   - The pedestrian observes the crosswalk and decides to stop.\n   Then:\n   - The pedestrian's velocity becomes [0.0, 0.0].\n   - The pedestrian's heading remains 1.4923592805862427.\n   - The agent's position is updated to be at the intersection.\n\n2. **Test Scenario 2: Pedestrian Continues at a Non-Crosswalk**\n   Feature: Pedestrian continues at a non-crosswalk\n   Scenario: A pedestrian is at position [686.2042236328125, -2157.621337890625] with a velocity of [0.0, 0.0] and heading 1.4923592805862427. An intersection is located at position [687.6711743164062, -2156.8109143046875]. There is no crosswalk at the intersection.\n   Given:\n   - The ped"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        684.9456787109375,
+        -2154.524658203125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.4923592805862427,
+      "size": [
+        0.5333153605461121,
+        1.0853229761123657,
+        0.3600539267063141
+      ],
+      "track_id": 22
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\nScenario: A pedestrian walks in a random direction\n  Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427\n  When: The pedestrian starts walking in a random direction\n  Then: The pedestrian's position changes to a new location determined by a random walk algorithm\n\nFeature: Pedestrian interaction with obstacles\nScenario: A pedestrian encounters an obstacle\n  Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427\n  When: The pedestrian encounters an obstacle at position [300, 300]\n  Then: The pedestrian stops and re-evaluates their path, changing their velocity and heading accordingly\n\nFeature: Pedestrian avoidance\nScenario: A pedestrian must avoid an obstacle\n  Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427\n  When: The pedestrian encounters an obstacle at position [300, 300]\n  Then: The pedestrian calculates the shortest path around the obstacle and adjusts their velocity and heading accordingly\n\nFeature: Pedestrian emergency stopping\nScenario: A pedestrian must stop immediately due to an emergency\n  Given: The pedestrian is located at position [684.9456787109375, -2154.524658203"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        684.1436157226562,
+        -2155.72509765625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.6284213066101074,
+      "size": [
+        1.7144755125045776,
+        0.9522160887718201,
+        0.5230101943016052
+      ],
+      "track_id": 23
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian walks straight ahead\n\nGiven: The pedestrian is located at position [684.1436157226562, -2155.72509765625] with a velocity of [0.0, 0.0] and heading of 0.6284213066101074.\n\nWhen: The pedestrian takes a step forward with a velocity of [0.1, 0] and continues to walk straight ahead.\n\nThen: The pedestrian's position is updated to [684.1436157226562, -2155.72509765625] + [0.1, 0] and their heading remains at 0.6284213066101074."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        679.9656372070312,
+        -2159.76171875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.0996601581573486,
+      "size": [
+        2.3197999000549316,
+        1.9110125303268433,
+        0.9300994873046875
+      ],
+      "track_id": 24
+    },
+    "generated_scenario": " \nFeature: Pedestrian Movement\nScenario: Pedestrian Crosses Street\n  Given: The pedestrian is at position [679.9656372070312, -2159.76171875] with zero velocity and heading 1.0996601581573486.\n  When: The pedestrian decides to cross the street.\n  Then: The pedestrian's position changes to a new position determined by the street crosswalk and traffic rules. The velocity becomes non-zero and pointing in the direction of the new position, and the heading remains 1.0996601581573486 or adjusts according to the new direction."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        677.925537109375,
+        -2166.4951171875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.0211204290390015,
+      "size": [
+        4.0322041511535645,
+        1.2399660348892212,
+        1.3032644987106323
+      ],
+      "track_id": 25
+    },
+    "generated_scenario": " \nFeature: Pedestrian motion\nScenario: Pedestrian crosses the street\n  Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk\n  When the pedestrian notices a green light and decides to cross the street\n  Then the pedestrian's velocity changes to [0.0, 0.0] and heading becomes close to [2.291421129116537, 0.0]\n  And the pedestrian crosses the street at the crosswalk\n  And the pedestrian's velocity becomes [0.0, 0.0] and heading remains close to [2.291421129116537, 0.0]\n\nFeature: Pedestrian interaction with moving vehicles\nScenario: Pedestrian walks alongside a moving vehicle\n  Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk\n  When a moving vehicle approaches and the pedestrian notices it\n  Then the pedestrian stops walking and waits for the vehicle to pass by\n  And the vehicle passes the pedestrian without any collisions\n  And the pedestrian resumes walking alongside the vehicle\n  And the vehicle continues moving without any deviations\n\nFeature: Pedestrian interaction with static obstacles\nScenario: Pedestrian avoids a static obstacle\n  Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk\n  When a static obstacle appears in front of the pedestrian\n  Then the pedestrian notices the obstacle and changes heading to avoid it\n  And the pedestrian walks around the obstacle without any collisions\n  And the pedestrian resumes the original heading\n\nThese scenarios cover various aspects of pedest"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        672.8899536132812,
+        -2170.03466796875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.6284213066101074,
+      "size": [
+        0.9442999958992004,
+        0.270948201417923,
+        1.660396695137024
+      ],
+      "track_id": 26
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\nScenario: Pedestrian stops at a crosswalk\n  Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074\n  When: The pedestrian encounters a crosswalk and applies the \"stop\" command\n  Then: The pedestrian's velocity becomes [0.0, 0.0] and they remain at position [672.8899536132812, -2170.03466796875]\n\nFeature: Pedestrian movement with obstacles\nScenario: Pedestrian avoids an obstacle\n  Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074\n  When: The pedestrian encounters an obstacle in their path\n  Then: The pedestrian changes their heading to [0.0, 0.0] and moves to a new position [672.8899536132812, -2170.03466796875]\n\nFeature: Pedestrian movement with varying speed\nScenario: Pedestrian walks at varying speed\n  Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074\n  When: The pedestrian applies the \"walk\" command and their velocity changes to [0.2,"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        667.8151245117188,
+        -2177.7236328125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.3352797031402588,
+      "size": [
+        1.182131290435791,
+        0.3825395405292511,
+        1.6267393827438354
+      ],
+      "track_id": 27
+    },
+    "generated_scenario": " \nFeature: Pedestrian motion\n\nScenario: Pedestrian starts walking at a crosswalk\n  Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588\n  When the pedestrian starts walking\n  Then the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588\n\nScenario: Pedestrian stops at a stop sign\n  Given the pedestrian is walking and heading 1.3352797031402588\n  When the pedestrian encounters a stop sign\n  Then the pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0\n\nScenario: Pedestrian crosses the street at an intersection\n  Given the pedestrian is walking and heading 1.3352797031402588\n  When the pedestrian encounters an intersection with a green light\n  Then the pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0\n\nScenario: Pedestrian yielded to a vehicle and started walking again\n  Given the pedestrian is walking and heading 1.3352797031402588\n  When the pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield\n  Then the pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again\n  When the pedestrian starts walking again\n  Then the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        671.422119140625,
+        -2180.91064453125
+      ],
+      "velocity": [
+        -1.1122522354125977,
+        -1.943619966506958
+      ],
+      "heading": 1.093706488609314,
+      "size": [
+        2.4361507892608643,
+        1.648786187171936,
+        0.962835431098938
+      ],
+      "track_id": 28
+    },
+    "generated_scenario": " \nHere are some test scenarios for a pedestrian agent:\n\nScenario 1: Walking on a sidewalk\nFeature: Pedestrian walks on a sidewalk\nScenario: Given the pedestrian is at a stationary position at [671.422119140625, -2180.91064453125], when the agent receives the \"Start Walking\" command, the pedestrian should start walking on the sidewalk.\nThen: The pedestrian's velocity should be close to [-1.1122522354125977, -1.943619966506958] and its heading should be close to 1.093706488609314.\n\nScenario 2: Crossing the street at a crosswalk\nFeature: Pedestrian crosses the street at a crosswalk\nScenario: Given the pedestrian is at a position close to [671.422119140625, -2180.91064453125], when the pedestrian notices a clear crossing, the pedestrian should look for vehicles, then start crossing the street at the crosswalk, maintaining a safe distance from vehicles.\nThen: The pedestrian's velocity should be close to [0, 0] and its heading should change gradually to a new heading towards [684.737509938671, -2168.247030554602]. The pedestrian should maintain a safe distance from any vehicles and obey traffic signals.\n\nScenario 3: Avoiding obstacles\nFeature: Pedestrian avoids obstacles\nScenario: Given the pedestrian is moving along a path, when an obstacle (e.g., a tree or a pole) is detected in the path, the pedestrian should look for an alternative path, avoid the obstacle, and continue moving.\nThen: The pedestrian's velocity should change gradually to adjust to the new path, and its heading should be"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        668.492919921875,
+        -2181.549560546875
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.7855009436607361,
+      "size": [
+        0.8814559578895569,
+        0.3671758472919464,
+        0.4810561537742615
+      ],
+      "track_id": 29
+    },
+    "generated_scenario": " \nFeature: Pedestrian's position\nScenario: Pedestrian remains at a specific location\n  Given: The pedestrian is located at position [668.492919921875, -2181.549560546875]\n  When: The pedestrian does not move\n  Then: The pedestrian remains at the same position [668.492919921875, -2181.549560546875]\n\nFeature: Pedestrian's velocity\nScenario: Pedestrian changes velocity to zero\n  Given: The pedestrian is moving with a velocity of [0.0, 0.0]\n  When: The pedestrian applies zero force\n  Then: The pedestrian's velocity becomes [0.0, 0.0]\n\nFeature: Pedestrian's heading\nScenario: Pedestrian changes heading direction\n  Given: The pedestrian is moving in a heading of 0.7855009436607361 degrees\n  When: The pedestrian changes heading direction to 180 degrees\n  Then: The pedestrian's heading becomes 180 degrees\n\nThese scenarios test the basic features of a pedestrian agent, ensuring it remains at a specific location, changes velocity to zero, and changes heading direction."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        669.471923828125,
+        -2183.37890625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.47134169936180115,
+      "size": [
+        0.9958170056343079,
+        1.1486833095550537,
+        0.6445464491844177
+      ],
+      "track_id": 30
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: A pedestrian walks straight ahead\n\nGiven:\n- The pedestrian is at position [669.471923828125, -2183.37890625]\n- The pedestrian's velocity is [0.0, 0.0]\n- The pedestrian's heading is 0.47134169936180115\n\nWhen:\n- The pedestrian steps forward with a constant step length\n\nThen:\n- The pedestrian's position changes according to their velocity and heading\n- The pedestrian's velocity remains [0.0, 0.0]\n- The pedestrian's heading remains 0.47134169936180115"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        667.4828491210938,
+        -2183.64111328125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.47134169936180115,
+      "size": [
+        1.19562566280365,
+        1.1980611085891724,
+        0.8292579054832458
+      ],
+      "track_id": 31
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian starts walking straight\n\nGiven:\n- Pedestrian is at position [667.4828491210938, -2183.64111328125]\n- Pedestrian has velocity [0.0, 0.0]\n- Pedestrian's heading is 0.47134169936180115\n\nWhen:\n- Pedestrian starts walking straight (i.e., heading = 0)\n\nThen:\n- Pedestrian's position changes according to their velocity and heading\n- Pedestrian's velocity remains [0.0, 0.0]\n- Pedestrian's heading becomes 0 (since they started walking straight)\n\nExpected results:\n- The pedestrian moves in a straight line, as indicated by their heading becoming 0.\n- The pedestrian's position changes according to their velocity and heading, while their velocity remains constant."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        665.3422241210938,
+        -2185.625
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.00010278765694238245,
+      "size": [
+        0.9206315875053406,
+        1.4808650016784668,
+        0.7901192903518677
+      ],
+      "track_id": 32
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian at rest\n\n  Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245\n\n  When the agent checks its position and velocity\n\n  Then the agent should have the position [665.3422241210938, -2185.625] and velocity [0.0, 0.0]\n\nScenario: Pedestrian starts walking\n\n  Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245\n\n  When the pedestrian applies a non-zero velocity\n\n  Then the pedestrian's velocity should change to [0.0, 0.0] and its heading should change to [0.00010278765694238245]\n\nScenario: Pedestrian changes heading\n\n  Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245\n\n  When the pedestrian applies a new heading\n\n  Then the pedestrian's heading should change to [new_heading]\n\n  And the pedestrian's position should remain at [665.3422241210938, -2185.625]\n\nThese scenarios cover the basic movements of a pedestrian, allowing for testing of the agent's behavior when it comes to position, velocity, and heading."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        665.2067260742188,
+        -2189.3125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.413819432258606,
+      "size": [
+        3.9804553985595703,
+        2.3652188777923584,
+        1.9914588928222656
+      ],
+      "track_id": 33
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian staying still\n\n  Given:\n    Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606\n\n  When:\n    No actions are taken by the pedestrian or any other agents\n\n  Then:\n    The pedestrian's position remains at [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606\n\nFeature: Pedestrian movement\n\nScenario: Pedestrian moving forward\n\n  Given:\n    Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606\n\n  When:\n    The pedestrian decides to move forward\n\n  Then:\n    The pedestrian's velocity becomes non-zero and points in the positive x-direction\n    The pedestrian's new position is approximately at [667.067260742188, -2191.3125] after some small adjustments\n    The pedestrian's heading remains at 1.413819432258606"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        659.7926025390625,
+        -2194.46484375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.1782000064849854,
+      "size": [
+        2.064861297607422,
+        1.0745311975479126,
+        1.5051288604736328
+      ],
+      "track_id": 34
+    },
+    "generated_scenario": " \nFeature: Pedestrian movement\n\nScenario: Pedestrian walks in a straight line\n\nGiven:\n- A pedestrian is at position [659.7926025390625, -2194.46484375] with velocity [0.0, 0.0] and heading 1.1782000064849854.\n\nWhen:\n- The pedestrian continues walking in a straight line.\n\nThen:\n- The pedestrian's position should update according to their constant velocity in the given heading."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        653.3523559570312,
+        -2200.55224609375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.3928018808364868,
+      "size": [
+        0.23561924695968628,
+        0.7790426015853882,
+        0.7855224013328552
+      ],
+      "track_id": 35
+    },
+    "generated_scenario": " \nFeature: Pedestrian Movement\n\nScenario: Pedestrian Crosses Street\n\nGiven:\n- The pedestrian is at position [653.3523559570312, -2200.55224609375] with a velocity of [0.0, 0.0] and heading of 0.3928018808364868.\n- The street has a crosswalk at position [653.3523559570312, -2198.55224609375].\n\nWhen:\n- The pedestrian steps onto the crosswalk.\n\nThen:\n- The pedestrian's velocity should be updated to [0.2, 0.2] and heading to 0.0.\n- The agent should be at position [653.3523559570312, -2198.55224609375] after a small time step.\n- The street should be marked as \"pedestrian has crossed\" at the crosswalk position."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        650.3146362304688,
+        -2204.771240234375
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 1.0211204290390015,
+      "size": [
+        0.8214170336723328,
+        1.0053378343582153,
+        0.9340553283691406
+      ],
+      "track_id": 36
+    },
+    "generated_scenario": " \nFeature: Pedestrian motion\nScenario: Pedestrian stays at rest\n  Given:\n    Pedestrian is at position [650.3146362304688, -2204.771240234375] with zero velocity and heading 1.0211204290390015\n  When:\n    The agent does not perform any actions (i.e., no acceleration, deceleration, or changes in heading)\n  Then:\n    The pedestrian's position remains at [650.3146362304688, -2204.771240234375] and their velocity remains zero, and their heading remains 1.0211204290390015"
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        652.2408447265625,
+        -2203.578125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.8640407919883728,
+      "size": [
+        0.6082478761672974,
+        1.5551738739013672,
+        0.4787980020046234
+      ],
+      "track_id": 37
+    },
+    "generated_scenario": " \nHere's a test scenario for a pedestrian with the given position, velocity, and heading:\n\nFeature: Pedestrian's Position\nScenario: Pedestrian in the correct location\n  Given: The pedestrian is located at position [652.2408447265625, -2203.578125]\n  When: The agent checks the pedestrian's position\n  Then: The agent finds the pedestrian at the correct location\n\nFeature: Pedestrian's Velocity\nScenario: Pedestrian is stationary\n  Given: The pedestrian's velocity is [0.0, 0.0]\n  When: The agent checks the pedestrian's velocity\n  Then: The agent finds that the pedestrian is stationary\n\nFeature: Pedestrian's Heading\nScenario: Pedestrian is facing the correct direction\n  Given: The pedestrian's heading is 0.8640407919883728\n  When: The agent checks the pedestrian's heading\n  Then: The agent finds that the pedestrian is facing the correct direction\n\nPlease note that these scenarios are based on the given position, velocity, and heading. If any of these properties change, the test scenarios should be updated accordingly."
+  },
+  {
+    "agent_data": {
+      "type": "PEDESTRIAN",
+      "position": [
+        651.3292236328125,
+        -2208.239501953125
+      ],
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "heading": 0.9425805807113647,
+      "size": [
+        0.185688778758049,
+        0.5776548385620117,
+        1.6523305177688599
+      ],
+      "track_id": 38
+    },
+    "generated_scenario": " \nHere are some BDD-style test scenarios for a pedestrian agent:\n\nFeature: Pedestrian Movement\n\nScenario: Crossing the street\n  Given the pedestrian is at the corner of Main Street and Maple Avenue\n  When the pedestrian steps onto the crosswalk\n  Then the pedestrian should be moving towards the intersection\n  And the traffic light should be red\n\nFeature: Pedestrian Waiting at a Crosswalk\n\nScenario: Waiting for the light to change\n  Given the pedestrian is at the corner of Main Street and Maple Avenue\n  When the traffic light is red\n  Then the pedestrian should be waiting at the crosswalk\n  And the traffic light should be displaying a countdown\n\nFeature: Pedestrian Intersection Awareness\n\nScenario: Intersection crossing\n  Given the pedestrian is at the intersection of Main Street and Maple Avenue\n  When the pedestrian sees a car approaching from the opposite direction\n  Then the pedestrian should glance at the car\n  And start to move towards the sidewalk\n  And the car should stop before crossing the pedestrian\n\nFeature: Pedestrian Headings\n\nScenario: Changing headings\n  Given the pedestrian is facing north at the corner of Main Street and Maple Avenue\n  When the pedestrian changes heading to face east\n  Then the pedestrian should rotate their head\n  And their heading should be east\n\nThese scenarios aim to test various aspects of a pedestrian agent's behavior, such as movement, waiting at crosswalks, intersection awareness, and headings. The given conditions and actions are just examples, and you can extend them to create more comprehensive test scenarios."
+  }
+]

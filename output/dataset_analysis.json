@@ -1,0 +1,139 @@
+{
+  "agents": {
+    "shape": [
+      1893736
+    ],
+    "size_mb": 209.49685668945312,
+    "fields": [
+      "centroid",
+      "extent",
+      "yaw",
+      "velocity",
+      "track_id",
+      "label_probabilities"
+    ],
+    "sample": {
+      "centroid": [
+        665.0342407226562,
+        -2207.51220703125
+      ],
+      "extent": [
+        4.39132833480835,
+        1.8138303756713867,
+        1.5909757614135742
+      ],
+      "yaw": 1.0166751146316528,
+      "velocity": [
+        0.0,
+        0.0
+      ],
+      "track_id": 1,
+      "label_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "frames": {
+    "shape": [
+      24838
+    ],
+    "size_mb": 3.2214813232421875,
+    "fields": [
+      "timestamp",
+      "agent_index_interval",
+      "traffic_light_faces_index_interval",
+      "ego_translation",
+      "ego_rotation"
+    ],
+    "sample": {
+      "timestamp": 1572643684801892606,
+      "agent_index_interval": [
+        0,
+        38
+      ],
+      "traffic_light_faces_index_interval": [
+        0,
+        0
+      ],
+      "ego_translation": [
+        680.6197509765625,
+        -2183.32763671875,
+        288.5411376953125
+      ],
+      "ego_rotation": [
+        [
+          0.5467331409454346,
+          -0.837294340133667,
+          0.004590855445712805
+        ],
+        [
+          0.8352873921394348,
+          0.545025646686554,
+          -0.07240184396505356
+        ],
+        [
+          0.0581195242702961,
+          0.04341917112469673,
+          0.9973649978637695
+        ]
+      ]
+    }
+  },
+  "scenes": {
+    "shape": [
+      100
+    ],
+    "size_mb": 0.0091552734375,
+    "fields": [
+      "frame_index_interval",
+      "host",
+      "start_time",
+      "end_time"
+    ],
+    "sample": {
+      "frame_index_interval": [
+        0,
+        248
+      ],
+      "host": "host-a013",
+      "start_time": 1572643684617362176,
+      "end_time": 1572643709617362176
+    }
+  },
+  "traffic_light_faces": {
+    "shape": [
+      316008
+    ],
+    "size_mb": 42.191619873046875,
+    "fields": [
+      "face_id",
+      "traffic_light_id",
+      "traffic_light_face_status"
+    ],
+    "sample": {
+      "face_id": "xbVG",
+      "traffic_light_id": "/ggb",
+      "traffic_light_face_status": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  }
+}
