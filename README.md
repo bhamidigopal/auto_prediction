@@ -5,24 +5,23 @@ This project provides tools to analyze and visualize the Toyota Woven Platform p
 ## Prerequisites
 
 - Python 3.8+
-- Toyota prediction dataset (`data.zarr`)
+- Toyota prediction dataset (`sample.zarr`)
 - Approximately 2GB free disk space
 
 ## Project Structure
 ```
-toyota_analysis/
-├── data/
-│   └── sample.zarr/          # Toyota prediction dataset
+auto_prediction/
+sample.zarr/          # Toyota prediction dataset
 │       ├── agents/
 │       ├── frames/
 │       ├── scenes/
 │       └── traffic_light_faces/
-├── src/
+ src/
 │   ├── data_loader.py        # Basic data loading and validation
 │   └── scene_analyzer.py     # Scene analysis and visualization
-├── output/                   # Generated analysis and visualizations
-├── logs/                     # Execution logs
-└── requirements.txt          # Python dependencies
+output/                   # Generated analysis and visualizations
+logs/                     # Execution logs
+requirements.txt          # Python dependencies
 ```
 
 ## Setup Instructions
