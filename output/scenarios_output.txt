@@ -1,0 +1,742 @@
+BDD Scenarios Report
+
+================================================================================
+
+Agent 1 (VEHICLE)
+----------------------------------------
+Feature 1: Vehicle Position Scenario: Vehicle Stops at a Specific Location Given the vehicle is located at position [665.0342407226562, -2207.51220703125] When: vehicle's velocity is set to 0 and its heading is 1.0166751146316528 Then: vehicle should be located at a position close to the given position after the actions are taken
+
+Scenario: Vehicle Stops at a Specific Location Given the vehicle is located at position [665.0342407226562, -2207.51220703125] When: vehicle's velocity is set to 0 and its heading is 1.0166751146316528 Then: vehicle should be located at a position close to the given position after the actions are taken
+  Given the vehicle is located at position [665.0342407226562, -2207.51220703125]
+  When vehicle's velocity is set to 0 and its heading is 1.0166751146316528
+  Then vehicle should be located at a position close to the given position after the actions are taken
+
+Feature 2: Vehicle Velocity Scenario: Vehicle Changes Velocity to 0 Given the vehicle's velocity is [velocity] When: vehicle's velocity is set to 0 Then: vehicle's velocity should be 0 after the action is taken
+
+Scenario: Vehicle Changes Velocity to 0 Given the vehicle's velocity is [velocity] When: vehicle's velocity is set to 0 Then: vehicle's velocity should be 0 after the action is taken
+  Given the vehicle's velocity is [velocity]
+  When vehicle's velocity is set to 0
+  Then vehicle's velocity should be 0 after the action is taken
+
+Feature 3: Vehicle Heading Scenario: Vehicle Changes Heading Given the vehicle's heading is [heading] When: vehicle's heading is set to [new heading] Then: vehicle's heading should be [new heading] after the action is taken Please note that these scenarios are based on the given position, velocity, and heading. If the initial conditions differ, the scenarios should be adjusted accordingly.
+
+Scenario: Vehicle Changes Heading Given the vehicle's heading is [heading] When: vehicle's heading is set to [new heading] Then: vehicle's heading should be [new heading] after the action is taken Please note that these scenarios are based on the given position, velocity, and heading. If the initial conditions differ, the scenarios should be adjusted accordingly.
+  Given the vehicle's heading is [heading]
+  When vehicle's heading is set to [new heading]
+  Then vehicle's heading should be [new heading] after the action is taken Please note that these scenarios are based on the given position, velocity, and heading. If the initial conditions differ, the scenarios should be adjusted accordingly.
+
+================================================================================
+
+Agent 2 (VEHICLE)
+----------------------------------------
+Feature 4: Vehicle State Scenario: Vehicle Stops at a Red Light Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714] When: vehicle's headlights illuminate the red light Then: vehicle's velocity remains [0.0, 0.0] and its heading remains [-0.7832239866256714] When: vehicle's headlights are no longer illuminating the red light Then: vehicle's velocity changes to [0.0, -10.0] and its heading remains [-0.7832239866256714] And the vehicle comes to a complete stop at a safe distance from the intersection And the vehicle's state matches the expected state after stopping at a red light
+
+Scenario: Vehicle Stops at a Red Light Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714] When: vehicle's headlights illuminate the red light Then: vehicle's velocity remains [0.0, 0.0] and its heading remains [-0.7832239866256714] When: vehicle's headlights are no longer illuminating the red light Then: vehicle's velocity changes to [0.0, -10.0] and its heading remains [-0.7832239866256714] And the vehicle comes to a complete stop at a safe distance from the intersection And the vehicle's state matches the expected state after stopping at a red light
+  Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714]
+  When vehicle's headlights illuminate the red light
+  Then vehicle's velocity remains [0.0, 0.0] and its heading remains [-0.7832239866256714]
+
+Feature 5: Environmental Conditions Scenario: Clear Weather Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714] When: weather is clear Then: driver can see the road, other vehicles, and pedestrians clearly And there are no adverse weather conditions that could affect the vehicle's operation These scenarios can be used to test the vehicle's behavior when stopping at a red light and its ability to navigate in clear weather conditions.
+
+Scenario: Clear Weather Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714] When: weather is clear Then: driver can see the road, other vehicles, and pedestrians clearly And there are no adverse weather conditions that could affect the vehicle's operation These scenarios can be used to test the vehicle's behavior when stopping at a red light and its ability to navigate in clear weather conditions.
+  Given the vehicle is at position [717.6612548828125, -2173.760009765625] with velocity [0.0, 0.0] and heading [-0.7832239866256714]
+  When weather is clear
+  Then driver can see the road, other vehicles, and pedestrians clearly
+  And there are no adverse weather conditions that could affect the vehicle's operation These scenarios can be used to test the vehicle's behavior when stopping at a red light and its ability to navigate in clear weather conditions.
+
+================================================================================
+
+Agent 3 (VEHICLE)
+----------------------------------------
+Feature 6: Vehicle Movement Scenario: Vehicle Stops at a Specific Position Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093] When: vehicle's throttle is pressed to the maximum Then: vehicle should stop at the same position with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]
+
+Scenario: Vehicle Stops at a Specific Position Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093] When: vehicle's throttle is pressed to the maximum Then: vehicle should stop at the same position with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]
+  Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]
+  When vehicle's throttle is pressed to the maximum
+  Then vehicle should stop at the same position with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]
+
+Feature 7: Vehicle Heading Scenario: Vehicle Changes Direction Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093] When: vehicle's steering wheel is turned by [0.1 radians] Then: vehicle should change its heading to [0.1 radians] with a velocity of [0.0, 0.0]
+
+Scenario: Vehicle Changes Direction Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093] When: vehicle's steering wheel is turned by [0.1 radians] Then: vehicle should change its heading to [0.1 radians] with a velocity of [0.0, 0.0]
+  Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]
+  When vehicle's steering wheel is turned by [0.1 radians]
+  Then vehicle should change its heading to [0.1 radians] with a velocity of [0.0, 0.0]
+
+Feature 8: Vehicle Velocity Scenario: Vehicle Accelerates or Decelerates Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093] When: vehicle's throttle is pressed slightly Then: vehicle should accelerate slightly with a new velocity of [0.1, 0.0] When: vehicle's throttle is released slightly Then: vehicle should decelerate slightly with a new velocity of [0.0, 0.1]
+
+Scenario: Vehicle Accelerates or Decelerates Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093] When: vehicle's throttle is pressed slightly Then: vehicle should accelerate slightly with a new velocity of [0.1, 0.0] When: vehicle's throttle is released slightly Then: vehicle should decelerate slightly with a new velocity of [0.0, 0.1]
+  Given the vehicle is at position [730.681396484375, -2180.678955078125] with a velocity of [0.0, 0.0] and heading of [-0.3217470049858093]
+  When vehicle's throttle is pressed slightly
+  Then vehicle should accelerate slightly with a new velocity of [0.1, 0.0]
+
+================================================================================
+
+Agent 4 (PEDESTRIAN)
+----------------------------------------
+================================================================================
+
+Agent 5 (PEDESTRIAN)
+----------------------------------------
+Feature 9: Pedestrian movement Scenario: Pedestrian crosses the street Given: The pedestrian is at position [669.7763061523438, -2213.004638671875] with velocity [0.0, 0.0] and heading 1.4923592805862427 When: The pedestrian changes heading to -1.7126747048247097 and steps forward by 1.0 meter Then: The pedestrian's position is approximately at [669.8165410924023, -2212.999839493164] and they are facing the direction of -1.7126747048247097
+
+Scenario: Pedestrian crosses the street Given: The pedestrian is at position [669.7763061523438, -2213.004638671875] with velocity [0.0, 0.0] and heading 1.4923592805862427 When: The pedestrian changes heading to -1.7126747048247097 and steps forward by 1.0 meter Then: The pedestrian's position is approximately at [669.8165410924023, -2212.999839493164] and they are facing the direction of -1.7126747048247097
+  Given The pedestrian is at position [669.7763061523438, -2213.004638671875] with velocity [0.0, 0.0] and heading 1.4923592805862427
+  When The pedestrian changes heading to -1.7126747048247097 and steps forward by 1.0 meter
+  Then The pedestrian's position is approximately at [669.8165410924023, -2212.999839493164] and they are facing the direction of -1.7126747048247097
+
+Feature 10: Vehicle behavior Scenario: Vehicle approaches and stops at the intersection Given: A vehicle is approaching the intersection at a moderate speed When: The vehicle's sensor system detects the presence of a pedestrian at the intersection Then: The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding
+
+Scenario: Vehicle approaches and stops at the intersection Given: A vehicle is approaching the intersection at a moderate speed When: The vehicle's sensor system detects the presence of a pedestrian at the intersection Then: The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding
+  Given A vehicle is approaching the intersection at a moderate speed
+  When The vehicle's sensor system detects the presence of a pedestrian at the intersection
+  Then The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding
+
+Feature 11: Pedestrian-vehicle interaction Scenario: Pedestrian and vehicle interact at the intersection Given: The pedestrian crosses the street as described in the previous scenario When: The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding Then: The vehicle's driver acknowledges the pedestrian's presence and allows them to cross the street safely And: The pedestrian and vehicle continue their respective paths without any accidents or conflicts These scenarios aim to cover the basic movements of a pedestrian and a vehicle at an intersection, ensuring safe and smooth interaction between them.
+
+Scenario: Pedestrian and vehicle interact at the intersection Given: The pedestrian crosses the street as described in the previous scenario When: The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding Then: The vehicle's driver acknowledges the pedestrian's presence and allows them to cross the street safely And: The pedestrian and vehicle continue their respective paths without any accidents or conflicts These scenarios aim to cover the basic movements of a pedestrian and a vehicle at an intersection, ensuring safe and smooth interaction between them.
+  Given The pedestrian crosses the street as described in the previous scenario
+  When The vehicle stops at the intersection and waits for the pedestrian to cross before proceeding
+  Then The vehicle's driver acknowledges the pedestrian's presence and allows them to cross the street safely
+  And : The pedestrian and vehicle continue their respective paths without any accidents or conflicts These scenarios aim to cover the basic movements of a pedestrian and a vehicle at an intersection, ensuring safe and smooth interaction between them.
+
+================================================================================
+
+Agent 6 (PEDESTRIAN)
+----------------------------------------
+Feature 12: Pedestrian's position Scenario: Pedestrian remains at a standstill at a specific location Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486 When: The agent performs no actions (i.e., no external forces act on the pedestrian) Then: The pedestrian remains at the same position, with a velocity of [0.0, 0.0] and heading of 1.0996601581573486
+
+Scenario: Pedestrian remains at a standstill at a specific location Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486 When: The agent performs no actions (i.e., no external forces act on the pedestrian) Then: The pedestrian remains at the same position, with a velocity of [0.0, 0.0] and heading of 1.0996601581573486
+  Given The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486
+  When The agent performs no actions (i.e., no external forces act on the pedestrian)
+  Then The pedestrian remains at the same position, with a velocity of [0.0, 0.0] and heading of 1.0996601581573486
+
+Feature 13: Pedestrian's velocity Scenario: Pedestrian changes velocity to zero Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486 When: The agent applies a force to the pedestrian in the direction of zero velocity Then: The pedestrian's velocity becomes [0.0, 0.0]
+
+Scenario: Pedestrian changes velocity to zero Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486 When: The agent applies a force to the pedestrian in the direction of zero velocity Then: The pedestrian's velocity becomes [0.0, 0.0]
+  Given The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486
+  When The agent applies a force to the pedestrian in the direction of zero velocity
+  Then The pedestrian's velocity becomes [0.0, 0.0]
+
+Feature 14: Pedestrian's heading Scenario: Pedestrian changes heading Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486 When: The agent applies a force to the pedestrian in a new direction Then: The pedestrian's heading changes to the new direction These scenarios assume that the agent is an autonomous vehicle and will act accordingly to maintain safety and follow traffic rules
+
+Scenario: Pedestrian changes heading Given: The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486 When: The agent applies a force to the pedestrian in a new direction Then: The pedestrian's heading changes to the new direction These scenarios assume that the agent is an autonomous vehicle and will act accordingly to maintain safety and follow traffic rules
+  Given The pedestrian is at the position [672.4368286132812, -2203.173095703125] with a velocity of [0.0, 0.0] and heading of 1.0996601581573486
+  When The agent applies a force to the pedestrian in a new direction
+  Then The pedestrian's heading changes to the new direction These scenarios assume that the agent is an autonomous vehicle and will act accordingly to maintain safety and follow traffic rules
+
+================================================================================
+
+Agent 7 (PEDESTRIAN)
+----------------------------------------
+Feature 15: Pedestrian motion Scenario: Pedestrian crosses the street Given: Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441 When: Pedestrian takes a step forward with velocity [0.0, 0.25] Pedestrian's position changes to [673.5379921635429, -2202.260122802738] Then: Pedestrian's velocity is [0.0, 0.25] Pedestrian's heading is still 0.7069611549377441 Pedestrian's position is [673.5379921635429, -2202.260122802738] Scenario: Pedestrian changes direction and stops Given: Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441 When: Pedestrian takes a step backward with velocity [0.0, -0.25] Pedestrian's position changes to [673.4379921635429, -2202.22412109375] Then: Pedestrian's velocity
+
+Scenario: Pedestrian crosses the street Given: Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441 When: Pedestrian takes a step forward with velocity [0.0, 0.25] Pedestrian's position changes to [673.5379921635429, -2202.260122802738] Then: Pedestrian's velocity is [0.0, 0.25] Pedestrian's heading is still 0.7069611549377441 Pedestrian's position is [673.5379921635429, -2202.260122802738]
+  Given Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441
+  When Pedestrian takes a step forward with velocity [0.0, 0.25] Pedestrian's position changes to [673.5379921635429, -2202.260122802738]
+  Then Pedestrian's velocity is [0.0, 0.25] Pedestrian's heading is still 0.7069611549377441 Pedestrian's position is [673.5379921635429, -2202.260122802738]
+
+Feature: Pedestrian motion Scenario: Pedestrian crosses the street Given: Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441 When: Pedestrian takes a step forward with velocity [0.0, 0.25] Pedestrian's position changes to [673.5379921635429, -2202.260122802738] Then: Pedestrian's velocity is [0.0, 0.25] Pedestrian's heading is still 0.7069611549377441 Pedestrian's position is [673.5379921635429, -2202.260122802738] Scenario: Pedestrian changes direction and stops Given: Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441 When: Pedestrian takes a step backward with velocity [0.0, -0.25] Pedestrian's position changes to [673.4379921635429, -2202.22412109375] Then: Pedestrian's velocity
+
+Scenario: Pedestrian changes direction and stops Given: Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441 When: Pedestrian takes a step backward with velocity [0.0, -0.25] Pedestrian's position changes to [673.4379921635429, -2202.22412109375] Then: Pedestrian's velocity
+  Given Pedestrian is at position [673.4970092773438, -2202.22412109375] Pedestrian's velocity is [0.0, 0.0] Pedestrian's heading is 0.7069611549377441
+  When Pedestrian takes a step backward with velocity [0.0, -0.25] Pedestrian's position changes to [673.4379921635429, -2202.22412109375]
+  Then Pedestrian's velocity
+
+================================================================================
+
+Agent 8 (PEDESTRIAN)
+----------------------------------------
+Feature 16: Pedestrian Movement Scenario: Pedestrian Crosses Street Given: The pedestrian is at position [674.9345703125, -2199.549072265625] with zero velocity and heading 0.7855009436607361. When: The pedestrian crosses the street by changing velocity to [0.5, 0.5] and heading to -0.7855009436607361. Then: The pedestrian is at position [675.11694306640625, -2199.7140637205078] with a velocity of [0.5, 0.5] and heading to -0.7855009436607361. And: The surrounding vehicles have been notified of the pedestrian's movement and adjust their driving accordingly.
+
+Scenario: Pedestrian Crosses Street Given: The pedestrian is at position [674.9345703125, -2199.549072265625] with zero velocity and heading 0.7855009436607361. When: The pedestrian crosses the street by changing velocity to [0.5, 0.5] and heading to -0.7855009436607361. Then: The pedestrian is at position [675.11694306640625, -2199.7140637205078] with a velocity of [0.5, 0.5] and heading to -0.7855009436607361. And: The surrounding vehicles have been notified of the pedestrian's movement and adjust their driving accordingly.
+  Given The pedestrian is at position [674.9345703125, -2199.549072265625] with zero velocity and heading 0.7855009436607361.
+  When The pedestrian crosses the street by changing velocity to [0.5, 0.5] and heading to -0.7855009436607361.
+  Then The pedestrian is at position [675.11694306640625, -2199.7140637205078] with a velocity of [0.5, 0.5] and heading to -0.7855009436607361.
+  And : The surrounding vehicles have been notified of the pedestrian's movement and adjust their driving accordingly.
+
+================================================================================
+
+Agent 9 (PEDESTRIAN)
+----------------------------------------
+Feature 17: Pedestrian Movement Scenario: Pedestrian Crosses Street Given: The pedestrian is located at position [676.89404296875, -2195.829833984375] with a velocity of [0.0, 0.0] and heading of 0.9425805807113647. When: The pedestrian decides to cross the street. Then: The pedestrian's position changes to a new position determined by the autonomous vehicle's sensor data and motion planning algorithms. The pedestrian's velocity and heading may also change based on the autonomous vehicle's responses and traffic conditions.
+
+Scenario: Pedestrian Crosses Street Given: The pedestrian is located at position [676.89404296875, -2195.829833984375] with a velocity of [0.0, 0.0] and heading of 0.9425805807113647. When: The pedestrian decides to cross the street. Then: The pedestrian's position changes to a new position determined by the autonomous vehicle's sensor data and motion planning algorithms. The pedestrian's velocity and heading may also change based on the autonomous vehicle's responses and traffic conditions.
+  Given The pedestrian is located at position [676.89404296875, -2195.829833984375] with a velocity of [0.0, 0.0] and heading of 0.9425805807113647.
+  When The pedestrian decides to cross the street.
+  Then The pedestrian's position changes to a new position determined by the autonomous vehicle's sensor data and motion planning algorithms. The pedestrian's velocity and heading may also change based on the autonomous vehicle's responses and traffic conditions.
+
+================================================================================
+
+Agent 10 (PEDESTRIAN)
+----------------------------------------
+Feature 18: Pedestrian Movement Scenario: Crossing the Street Given the pedestrian is at the corner of Main and Elm streets, looking to cross. When: pedestrian steps onto the crosswalk, facing the oncoming traffic. Then: pedestrian should be able to continue walking straight ahead.
+
+Scenario: Crossing the Street Given the pedestrian is at the corner of Main and Elm streets, looking to cross. When: pedestrian steps onto the crosswalk, facing the oncoming traffic. Then: pedestrian should be able to continue walking straight ahead.
+  Given the pedestrian is at the corner of Main and Elm streets, looking to cross.
+  When pedestrian steps onto the crosswalk, facing the oncoming traffic.
+  Then pedestrian should be able to continue walking straight ahead.
+
+Feature 19: Pedestrian Following the Route Scenario: Navigating a Complex Intersection Given the pedestrian is at an intersection with multiple roads, looking to navigate to the right. When: pedestrian presses the "right" button on the device. Then: pedestrian should follow the correct route and continue walking.
+
+Scenario: Navigating a Complex Intersection Given the pedestrian is at an intersection with multiple roads, looking to navigate to the right. When: pedestrian presses the "right" button on the device. Then: pedestrian should follow the correct route and continue walking.
+  Given the pedestrian is at an intersection with multiple roads, looking to navigate to the right.
+  When pedestrian presses the "right" button on the device.
+  Then pedestrian should follow the correct route and continue walking.
+
+Feature 20: Pedestrian Interaction with Obstacles Scenario: Encountering a Barrier Given the pedestrian is walking along a path, suddenly encounters a low barrier. When: pedestrian tries to step over the barrier. Then: pedestrian should be able to detect the barrier, stop, and resume walking once the barrier is passed.
+
+Scenario: Encountering a Barrier Given the pedestrian is walking along a path, suddenly encounters a low barrier. When: pedestrian tries to step over the barrier. Then: pedestrian should be able to detect the barrier, stop, and resume walking once the barrier is passed.
+  Given the pedestrian is walking along a path, suddenly encounters a low barrier.
+  When pedestrian tries to step over the barrier.
+  Then pedestrian should be able to detect the barrier, stop, and resume walking once the barrier is passed.
+
+Feature 21: Pedestrian Interaction with Other Agents Scenario: Walking Near a Car Given the pedestrian is walking along a sidewalk, a car approaches from the opposite direction. When: pedestrian notices the car and steps off the sidewalk to avoid it. Then: pedestrian should be able to safely return to the sidewalk once the car has passed. These scenarios cover basic movements, navigation, and interaction with obstacles and other agents. You can extend these scenarios to include more complex situations and test the pedestrian agent's behavior in various scenarios.
+
+Scenario: Walking Near a Car Given the pedestrian is walking along a sidewalk, a car approaches from the opposite direction. When: pedestrian notices the car and steps off the sidewalk to avoid it. Then: pedestrian should be able to safely return to the sidewalk once the car has passed. These scenarios cover basic movements, navigation, and interaction with obstacles and other agents. You can extend these scenarios to include more complex situations and test the pedestrian agent's behavior in various scenarios.
+  Given the pedestrian is walking along a sidewalk, a car approaches from the opposite direction.
+  When pedestrian notices the car and steps off the sidewalk to avoid it.
+  Then pedestrian should be able to safely return to the sidewalk once the car has passed. These scenarios cover basic movements, navigation, and interaction with obstacles and other agents. You can extend these scenarios to include more complex situations and test the pedestrian agent's behavior in various scenarios.
+
+================================================================================
+
+Agent 11 (PEDESTRIAN)
+----------------------------------------
+Feature 22: Pedestrian movement Scenario: Pedestrian staying still Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245 When: The agent does not perform any actions (i.e., it stays still) Then: The pedestrian's position remains at approximately [681.1609497070312, -2190.373046875] and its velocity remains [0.0, 0.0]
+
+Scenario: Pedestrian staying still Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245 When: The agent does not perform any actions (i.e., it stays still) Then: The pedestrian's position remains at approximately [681.1609497070312, -2190.373046875] and its velocity remains [0.0, 0.0]
+  Given The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245
+  When The agent does not perform any actions (i.e., it stays still)
+  Then The pedestrian's position remains at approximately [681.1609497070312, -2190.373046875] and its velocity remains [0.0, 0.0]
+
+Feature 23: Pedestrian movement Scenario: Pedestrian moving in a specific direction Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245 When: The agent moves in the positive x-direction (i.e., to the right) Then: The pedestrian's position moves to a new location, and its velocity becomes [0.0, 0.00010278765694238245]
+
+Scenario: Pedestrian moving in a specific direction Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245 When: The agent moves in the positive x-direction (i.e., to the right) Then: The pedestrian's position moves to a new location, and its velocity becomes [0.0, 0.00010278765694238245]
+  Given The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.0] and heading 0.00010278765694238245
+  When The agent moves in the positive x-direction (i.e., to the right)
+  Then The pedestrian's position moves to a new location, and its velocity becomes [0.0, 0.00010278765694238245]
+
+Feature 24: Pedestrian movement Scenario: Pedestrian changing direction Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.00010278765694238245] and heading 0.00010278765694238245 When: The agent changes its heading to a new value Then: The pedestrian'
+
+Scenario: Pedestrian changing direction Given: The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.00010278765694238245] and heading 0.00010278765694238245 When: The agent changes its heading to a new value Then: The pedestrian'
+  Given The pedestrian is at position [681.1609497070312, -2190.373046875] with velocity [0.0, 0.00010278765694238245] and heading 0.00010278765694238245
+  When The agent changes its heading to a new value
+  Then The pedestrian'
+
+================================================================================
+
+Agent 12 (PEDESTRIAN)
+----------------------------------------
+Feature 25: Pedestrian motion Scenario: Pedestrian at rest Given: The pedestrian is at rest at position [686.0689086914062, -2182.83544921875] with a velocity of [0.0, 0.0] and heading of 0.15718242526054382. When: An autonomous vehicle approaches the pedestrian at a distance of 10 meters. Then: The pedestrian remains at rest and the autonomous vehicle does not collide with the pedestrian.
+
+Scenario: Pedestrian at rest Given: The pedestrian is at rest at position [686.0689086914062, -2182.83544921875] with a velocity of [0.0, 0.0] and heading of 0.15718242526054382. When: An autonomous vehicle approaches the pedestrian at a distance of 10 meters. Then: The pedestrian remains at rest and the autonomous vehicle does not collide with the pedestrian.
+  Given The pedestrian is at rest at position [686.0689086914062, -2182.83544921875] with a velocity of [0.0, 0.0] and heading of 0.15718242526054382.
+  When An autonomous vehicle approaches the pedestrian at a distance of 10 meters.
+  Then The pedestrian remains at rest and the autonomous vehicle does not collide with the pedestrian.
+
+================================================================================
+
+Agent 13 (PEDESTRIAN)
+----------------------------------------
+Feature 26: Pedestrian movement Scenario: Pedestrian crosses the street Given: The pedestrian is at position [713.8087768554688, -2174.413818359375] with velocity [0.0, 0.0] and heading 0.15718242526054382 When: The pedestrian starts to cross the street by moving their head towards the opposite direction Then: The pedestrian's position changes to a new position, and the velocity becomes [0.2, 0.0] with a heading towards the opposite direction And: The pedestrian's position is within the crossing zone of the street
+
+Scenario: Pedestrian crosses the street Given: The pedestrian is at position [713.8087768554688, -2174.413818359375] with velocity [0.0, 0.0] and heading 0.15718242526054382 When: The pedestrian starts to cross the street by moving their head towards the opposite direction Then: The pedestrian's position changes to a new position, and the velocity becomes [0.2, 0.0] with a heading towards the opposite direction And: The pedestrian's position is within the crossing zone of the street
+  Given The pedestrian is at position [713.8087768554688, -2174.413818359375] with velocity [0.0, 0.0] and heading 0.15718242526054382
+  When The pedestrian starts to cross the street by moving their head towards the opposite direction
+  Then The pedestrian's position changes to a new position, and the velocity becomes [0.2, 0.0] with a heading towards the opposite direction
+  And : The pedestrian's position is within the crossing zone of the street
+
+Feature 27: Vehicle behavior Scenario: Vehicle approaches the pedestrian Given: A vehicle is approaching the pedestrian's crossing zone When: The vehicle's sensor detects the pedestrian Then: The vehicle stops and waits for the pedestrian to cross the street And: The pedestrian finishes crossing the street before the vehicle moves again
+
+Scenario: Vehicle approaches the pedestrian Given: A vehicle is approaching the pedestrian's crossing zone When: The vehicle's sensor detects the pedestrian Then: The vehicle stops and waits for the pedestrian to cross the street And: The pedestrian finishes crossing the street before the vehicle moves again
+  Given A vehicle is approaching the pedestrian's crossing zone
+  When The vehicle's sensor detects the pedestrian
+  Then The vehicle stops and waits for the pedestrian to cross the street
+  And : The pedestrian finishes crossing the street before the vehicle moves again
+
+================================================================================
+
+Agent 14 (PEDESTRIAN)
+----------------------------------------
+Feature 28: Pedestrian movement Scenario: Pedestrian walks in a straight line Given: A pedestrian is located at position [686.8765869140625, -2181.53955078125] with velocity [0.0, 0.0] and heading 0.23572224378585815. When: The pedestrian starts walking in a straight line. Then: The pedestrian's position changes according to their velocity and heading, and they remain within a reasonable distance from the given position.
+
+Scenario: Pedestrian walks in a straight line Given: A pedestrian is located at position [686.8765869140625, -2181.53955078125] with velocity [0.0, 0.0] and heading 0.23572224378585815. When: The pedestrian starts walking in a straight line. Then: The pedestrian's position changes according to their velocity and heading, and they remain within a reasonable distance from the given position.
+  Given A pedestrian is located at position [686.8765869140625, -2181.53955078125] with velocity [0.0, 0.0] and heading 0.23572224378585815.
+  When The pedestrian starts walking in a straight line.
+  Then The pedestrian's position changes according to their velocity and heading, and they remain within a reasonable distance from the given position.
+
+================================================================================
+
+Agent 15 (PEDESTRIAN)
+----------------------------------------
+Feature 29: Pedestrian movement Scenario: Pedestrian crosses the street Given: Pedestrian is at position [690.985595703125, -2181.589111328125] Pedestrian has a velocity of [0.0, 0.0] Pedestrian is facing a heading of 0.6284213066101074 When: Pedestrian crosses the street (action) Then: Pedestrian moves to a new position (expected result) The new position should be in the opposite direction of the initial position The velocity and heading of the pedestrian should remain [0.0, 0.0] and 0.6284213066101074, respectively
+
+Scenario: Pedestrian crosses the street Given: Pedestrian is at position [690.985595703125, -2181.589111328125] Pedestrian has a velocity of [0.0, 0.0] Pedestrian is facing a heading of 0.6284213066101074 When: Pedestrian crosses the street (action) Then: Pedestrian moves to a new position (expected result) The new position should be in the opposite direction of the initial position The velocity and heading of the pedestrian should remain [0.0, 0.0] and 0.6284213066101074, respectively
+  Given Pedestrian is at position [690.985595703125, -2181.589111328125] Pedestrian has a velocity of [0.0, 0.0] Pedestrian is facing a heading of 0.6284213066101074
+  When Pedestrian crosses the street (action)
+  Then Pedestrian moves to a new position (expected result) The new position should be in the opposite direction of the initial position The velocity and heading of the pedestrian should remain [0.0, 0.0] and 0.6284213066101074, respectively
+
+================================================================================
+
+Agent 16 (PEDESTRIAN)
+----------------------------------------
+Feature 30: Pedestrian's position Scenario: Pedestrian remains at a specific location Given the pedestrian is located at position [687.9076538085938, -2179.499755859375] When: pedestrian does not move Then: pedestrian's position remains at [687.9076538085938, -2179.499755859375]
+
+Scenario: Pedestrian remains at a specific location Given the pedestrian is located at position [687.9076538085938, -2179.499755859375] When: pedestrian does not move Then: pedestrian's position remains at [687.9076538085938, -2179.499755859375]
+  Given the pedestrian is located at position [687.9076538085938, -2179.499755859375]
+  When pedestrian does not move
+  Then pedestrian's position remains at [687.9076538085938, -2179.499755859375]
+
+Feature 31: Pedestrian's velocity Scenario: Pedestrian changes velocity to zero Given the pedestrian's velocity is [0.0, 0.0] When: pedestrian changes velocity to zero Then: pedestrian's velocity is now [0.0, 0.0]
+
+Scenario: Pedestrian changes velocity to zero Given the pedestrian's velocity is [0.0, 0.0] When: pedestrian changes velocity to zero Then: pedestrian's velocity is now [0.0, 0.0]
+  Given the pedestrian's velocity is [0.0, 0.0]
+  When pedestrian changes velocity to zero
+  Then pedestrian's velocity is now [0.0, 0.0]
+
+Feature 32: Pedestrian's heading Scenario: Pedestrian changes heading Given the pedestrian's heading is 0.23572224378585815 When: pedestrian changes heading Then: pedestrian's heading is now [0.23572224378585815]
+
+Scenario: Pedestrian changes heading Given the pedestrian's heading is 0.23572224378585815 When: pedestrian changes heading Then: pedestrian's heading is now [0.23572224378585815]
+  Given the pedestrian's heading is 0.23572224378585815
+  When pedestrian changes heading
+  Then pedestrian's heading is now [0.23572224378585815]
+
+================================================================================
+
+Agent 17 (PEDESTRIAN)
+----------------------------------------
+Feature 33: Pedestrian movement Scenario: Pedestrian walks straight Given: A pedestrian is located at position [694.6976318359375, -2175.463623046875] with velocity [0.0, 0.0] and heading 1.0211204290390015. When: The pedestrian continues walking straight along the street. Then: The pedestrian's position should update according to their straight-line motion. The new position should be approximately at [695.8192934023438, -2176.259309270507]. The velocity should remain [0.0, 0.0], and the heading should still be 1.0211204290390015.
+
+Scenario: Pedestrian walks straight Given: A pedestrian is located at position [694.6976318359375, -2175.463623046875] with velocity [0.0, 0.0] and heading 1.0211204290390015. When: The pedestrian continues walking straight along the street. Then: The pedestrian's position should update according to their straight-line motion. The new position should be approximately at [695.8192934023438, -2176.259309270507]. The velocity should remain [0.0, 0.0], and the heading should still be 1.0211204290390015.
+  Given A pedestrian is located at position [694.6976318359375, -2175.463623046875] with velocity [0.0, 0.0] and heading 1.0211204290390015.
+  When The pedestrian continues walking straight along the street.
+  Then The pedestrian's position should update according to their straight-line motion. The new position should be approximately at [695.8192934023438, -2176.259309270507]. The velocity should remain [0.0, 0.0], and the heading should still be 1.0211204290390015.
+
+================================================================================
+
+Agent 18 (PEDESTRIAN)
+----------------------------------------
+Feature 34: Pedestrian Movement Scenario: Pedestrian Crosses Street Given: A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606. When: The pedestrian decides to cross the street. Then: The pedestrian's velocity becomes non-zero and points in the opposite direction of the crosswalk, and their heading changes to the angle of the crosswalk.
+
+Scenario: Pedestrian Crosses Street Given: A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606. When: The pedestrian decides to cross the street. Then: The pedestrian's velocity becomes non-zero and points in the opposite direction of the crosswalk, and their heading changes to the angle of the crosswalk.
+  Given A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606.
+  When The pedestrian decides to cross the street.
+  Then The pedestrian's velocity becomes non-zero and points in the opposite direction of the crosswalk, and their heading changes to the angle of the crosswalk.
+
+Feature 35: Pedestrian Obstacle Encounter Scenario: Pedestrian Avoids Obstacle Given: A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606. An obstacle is at position [694.2472297004123, -2178.319439970997]. When: The pedestrian notices the obstacle. Then: The pedestrian's velocity becomes zero, and they quickly change direction to avoid the obstacle. Please note that these scenarios are hypothetical and should be replaced with realistic scenarios based on the actual behavior of the pedestrian and the presence of obstacles in the environment.
+
+Scenario: Pedestrian Avoids Obstacle Given: A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606. An obstacle is at position [694.2472297004123, -2178.319439970997]. When: The pedestrian notices the obstacle. Then: The pedestrian's velocity becomes zero, and they quickly change direction to avoid the obstacle. Please note that these scenarios are hypothetical and should be replaced with realistic scenarios based on the actual behavior of the pedestrian and the presence of obstacles in the environment.
+  Given A pedestrian is at position [691.4769897460938, -2174.4951171875] with zero velocity and heading 1.413819432258606. An obstacle is at position [694.2472297004123, -2178.319439970997].
+  When The pedestrian notices the obstacle.
+  Then The pedestrian's velocity becomes zero, and they quickly change direction to avoid the obstacle. Please note that these scenarios are hypothetical and should be replaced with realistic scenarios based on the actual behavior of the pedestrian and the presence of obstacles in the environment.
+
+================================================================================
+
+Agent 19 (PEDESTRIAN)
+----------------------------------------
+Feature 36: Pedestrian movement Scenario: Pedestrian walks in a straight line Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441 When: The pedestrian starts walking in a straight line Then: The pedestrian's position is updated to [702.6047451413707, -2164.337573104992] and their velocity is set to [0.2, 0.2]
+
+Scenario: Pedestrian walks in a straight line Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441 When: The pedestrian starts walking in a straight line Then: The pedestrian's position is updated to [702.6047451413707, -2164.337573104992] and their velocity is set to [0.2, 0.2]
+  Given A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441
+  When The pedestrian starts walking in a straight line
+  Then The pedestrian's position is updated to [702.6047451413707, -2164.337573104992] and their velocity is set to [0.2, 0.2]
+
+Feature 37: Pedestrian interaction with obstacles Scenario: Pedestrian avoids an obstacle Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441 When: The pedestrian encounters an obstacle at position [702.29248046875, -2166.29248046875] Then: The pedestrian changes direction to avoid the obstacle and their position is updated to [702.043015931227, -2166.337573104992]
+
+Scenario: Pedestrian avoids an obstacle Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441 When: The pedestrian encounters an obstacle at position [702.29248046875, -2166.29248046875] Then: The pedestrian changes direction to avoid the obstacle and their position is updated to [702.043015931227, -2166.337573104992]
+  Given A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611549377441
+  When The pedestrian encounters an obstacle at position [702.29248046875, -2166.29248046875]
+  Then The pedestrian changes direction to avoid the obstacle and their position is updated to [702.043015931227, -2166.337573104992]
+
+Feature 38: Pedestrian interaction with intersections Scenario: Pedestrian crosses an intersection Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611
+
+Scenario: Pedestrian crosses an intersection Given: A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611
+  Given A pedestrian is located at position [702.4561157226562, -2164.29248046875] with a velocity of [0.0, 0.0] and heading 0.7069611
+
+================================================================================
+
+Agent 20 (PEDESTRIAN)
+----------------------------------------
+Feature 39: Pedestrian motion Scenario: Pedestrian crosses the street Given the pedestrian is at position [689.9425048828125, -2148.4169921875] and heading towards the crosswalk When: pedestrian notices the green light and steps into the crosswalk Then: pedestrian's position changes to [804.3249610689128, -2146.333283018223] And the pedestrian's heading is now at 0.3142620623111725 And the vehicle at position [804.3249610689128, -2146.333283018223] notices the pedestrian and stops And the vehicle's heading changes to -1.246071499606943 And the pedestrian waits for the vehicle to pass by before continuing to walk And the pedestrian's position changes to [1002.3042176025225, -2144.077345443371] And the pedestrian's heading is now at 0.3142620623111725 And the vehicle at position [1002.3042176025225, -2144.077345443371] notices the pedestrian and stops And the vehicle's heading changes to -1.246071499606943 And the pedestrian finishes crossing the street safely This scenario tests the pedestrian's ability to cross the street and ensure that vehicles approaching from both directions stop to allow the pedestrian to pass by safely. The scenario also tests the vehicle's ability to detect and react to
+
+Scenario: Pedestrian crosses the street Given the pedestrian is at position [689.9425048828125, -2148.4169921875] and heading towards the crosswalk When: pedestrian notices the green light and steps into the crosswalk Then: pedestrian's position changes to [804.3249610689128, -2146.333283018223] And the pedestrian's heading is now at 0.3142620623111725 And the vehicle at position [804.3249610689128, -2146.333283018223] notices the pedestrian and stops And the vehicle's heading changes to -1.246071499606943 And the pedestrian waits for the vehicle to pass by before continuing to walk And the pedestrian's position changes to [1002.3042176025225, -2144.077345443371] And the pedestrian's heading is now at 0.3142620623111725 And the vehicle at position [1002.3042176025225, -2144.077345443371] notices the pedestrian and stops And the vehicle's heading changes to -1.246071499606943 And the pedestrian finishes crossing the street safely This scenario tests the pedestrian's ability to cross the street and ensure that vehicles approaching from both directions stop to allow the pedestrian to pass by safely. The scenario also tests the vehicle's ability to detect and react to
+  Given the pedestrian is at position [689.9425048828125, -2148.4169921875] and heading towards the crosswalk
+  When pedestrian notices the green light and steps into the crosswalk
+  Then pedestrian's position changes to [804.3249610689128, -2146.333283018223]
+  And the pedestrian's heading is now at 0.3142620623111725
+  And the vehicle at position [804.3249610689128, -2146.333283018223] notices the pedestrian and stops
+  And the vehicle's heading changes to -1.246071499606943
+  And the pedestrian waits for the vehicle to pass by before continuing to walk
+  And the pedestrian's position changes to [1002.3042176025225, -2144.077345443371]
+  And the pedestrian's heading is now at 0.3142620623111725
+  And the vehicle at position [1002.3042176025225, -2144.077345443371] notices the pedestrian and stops
+  And the vehicle's heading changes to -1.246071499606943
+  And the pedestrian finishes crossing the street safely This scenario tests the pedestrian's ability to cross the street and ensure that vehicles approaching from both directions stop to allow the pedestrian to pass by safely. The scenario also tests the vehicle's ability to detect and react to
+
+================================================================================
+
+Agent 21 (PEDESTRIAN)
+----------------------------------------
+Feature 40: Pedestrian stops at a crosswalk Scenario: A pedestrian is at position [686.2042236328125, -2157.621337890625] with a velocity of [0.0, 0.0] and heading 1.4923592805862427. An intersection is located at position [687.6711743164062, -2156.8109143046875]. The crosswalk is at the intersection. Given: The pedestrian's position and velocity are as specified. The intersection has a crosswalk. When: The pedestrian observes the crosswalk and decides to stop. Then: The pedestrian's velocity becomes [0.0, 0.0]. The pedestrian's heading remains 1.4923592805862427. The agent's position is updated to be at the intersection. 2. **Test Scenario 2: Pedestrian Continues at a Non-Crosswalk**
+
+Scenario: A pedestrian is at position [686.2042236328125, -2157.621337890625] with a velocity of [0.0, 0.0] and heading 1.4923592805862427. An intersection is located at position [687.6711743164062, -2156.8109143046875]. The crosswalk is at the intersection. Given: The pedestrian's position and velocity are as specified. The intersection has a crosswalk. When: The pedestrian observes the crosswalk and decides to stop. Then: The pedestrian's velocity becomes [0.0, 0.0]. The pedestrian's heading remains 1.4923592805862427. The agent's position is updated to be at the intersection. 2. **Test Scenario 2: Pedestrian Continues at a Non-Crosswalk**
+  Given The pedestrian's position and velocity are as specified. The intersection has a crosswalk.
+  When The pedestrian observes the crosswalk and decides to stop.
+  Then The pedestrian's velocity becomes [0.0, 0.0]. The pedestrian's heading remains 1.4923592805862427. The agent's position is updated to be at the intersection. 2. **Test Scenario 2: Pedestrian Continues at a Non-Crosswalk**
+
+Feature 41: Pedestrian continues at a non-crosswalk Scenario: A pedestrian is at position [686.2042236328125, -2157.621337890625] with a velocity of [0.0, 0.0] and heading 1.4923592805862427. An intersection is located at position [687.6711743164062, -2156.8109143046875]. There is no crosswalk at the intersection. Given: The ped
+
+Scenario: A pedestrian is at position [686.2042236328125, -2157.621337890625] with a velocity of [0.0, 0.0] and heading 1.4923592805862427. An intersection is located at position [687.6711743164062, -2156.8109143046875]. There is no crosswalk at the intersection. Given: The ped
+  Given The ped
+
+================================================================================
+
+Agent 22 (PEDESTRIAN)
+----------------------------------------
+Feature 42: Pedestrian movement Scenario: A pedestrian walks in a random direction Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427 When: The pedestrian starts walking in a random direction Then: The pedestrian's position changes to a new location determined by a random walk algorithm
+
+Scenario: A pedestrian walks in a random direction Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427 When: The pedestrian starts walking in a random direction Then: The pedestrian's position changes to a new location determined by a random walk algorithm
+  Given The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427
+  When The pedestrian starts walking in a random direction
+  Then The pedestrian's position changes to a new location determined by a random walk algorithm
+
+Feature 43: Pedestrian interaction with obstacles Scenario: A pedestrian encounters an obstacle Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427 When: The pedestrian encounters an obstacle at position [300, 300] Then: The pedestrian stops and re-evaluates their path, changing their velocity and heading accordingly
+
+Scenario: A pedestrian encounters an obstacle Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427 When: The pedestrian encounters an obstacle at position [300, 300] Then: The pedestrian stops and re-evaluates their path, changing their velocity and heading accordingly
+  Given The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427
+  When The pedestrian encounters an obstacle at position [300, 300]
+  Then The pedestrian stops and re-evaluates their path, changing their velocity and heading accordingly
+
+Feature 44: Pedestrian avoidance Scenario: A pedestrian must avoid an obstacle Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427 When: The pedestrian encounters an obstacle at position [300, 300] Then: The pedestrian calculates the shortest path around the obstacle and adjusts their velocity and heading accordingly
+
+Scenario: A pedestrian must avoid an obstacle Given: The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427 When: The pedestrian encounters an obstacle at position [300, 300] Then: The pedestrian calculates the shortest path around the obstacle and adjusts their velocity and heading accordingly
+  Given The pedestrian is located at position [684.9456787109375, -2154.524658203125] with zero velocity and heading 1.4923592805862427
+  When The pedestrian encounters an obstacle at position [300, 300]
+  Then The pedestrian calculates the shortest path around the obstacle and adjusts their velocity and heading accordingly
+
+Feature 45: Pedestrian emergency stopping Scenario: A pedestrian must stop immediately due to an emergency Given: The pedestrian is located at position [684.9456787109375, -2154.524658203
+
+Scenario: A pedestrian must stop immediately due to an emergency Given: The pedestrian is located at position [684.9456787109375, -2154.524658203
+  Given The pedestrian is located at position [684.9456787109375, -2154.524658203
+
+================================================================================
+
+Agent 23 (PEDESTRIAN)
+----------------------------------------
+Feature 46: Pedestrian movement Scenario: Pedestrian walks straight ahead Given: The pedestrian is located at position [684.1436157226562, -2155.72509765625] with a velocity of [0.0, 0.0] and heading of 0.6284213066101074. When: The pedestrian takes a step forward with a velocity of [0.1, 0] and continues to walk straight ahead. Then: The pedestrian's position is updated to [684.1436157226562, -2155.72509765625] + [0.1, 0] and their heading remains at 0.6284213066101074.
+
+Scenario: Pedestrian walks straight ahead Given: The pedestrian is located at position [684.1436157226562, -2155.72509765625] with a velocity of [0.0, 0.0] and heading of 0.6284213066101074. When: The pedestrian takes a step forward with a velocity of [0.1, 0] and continues to walk straight ahead. Then: The pedestrian's position is updated to [684.1436157226562, -2155.72509765625] + [0.1, 0] and their heading remains at 0.6284213066101074.
+  Given The pedestrian is located at position [684.1436157226562, -2155.72509765625] with a velocity of [0.0, 0.0] and heading of 0.6284213066101074.
+  When The pedestrian takes a step forward with a velocity of [0.1, 0] and continues to walk straight ahead.
+  Then The pedestrian's position is updated to [684.1436157226562, -2155.72509765625] + [0.1, 0] and their heading remains at 0.6284213066101074.
+
+================================================================================
+
+Agent 24 (PEDESTRIAN)
+----------------------------------------
+Feature 47: Pedestrian Movement Scenario: Pedestrian Crosses Street Given: The pedestrian is at position [679.9656372070312, -2159.76171875] with zero velocity and heading 1.0996601581573486. When: The pedestrian decides to cross the street. Then: The pedestrian's position changes to a new position determined by the street crosswalk and traffic rules. The velocity becomes non-zero and pointing in the direction of the new position, and the heading remains 1.0996601581573486 or adjusts according to the new direction.
+
+Scenario: Pedestrian Crosses Street Given: The pedestrian is at position [679.9656372070312, -2159.76171875] with zero velocity and heading 1.0996601581573486. When: The pedestrian decides to cross the street. Then: The pedestrian's position changes to a new position determined by the street crosswalk and traffic rules. The velocity becomes non-zero and pointing in the direction of the new position, and the heading remains 1.0996601581573486 or adjusts according to the new direction.
+  Given The pedestrian is at position [679.9656372070312, -2159.76171875] with zero velocity and heading 1.0996601581573486.
+  When The pedestrian decides to cross the street.
+  Then The pedestrian's position changes to a new position determined by the street crosswalk and traffic rules. The velocity becomes non-zero and pointing in the direction of the new position, and the heading remains 1.0996601581573486 or adjusts according to the new direction.
+
+================================================================================
+
+Agent 25 (PEDESTRIAN)
+----------------------------------------
+Feature 48: Pedestrian motion Scenario: Pedestrian crosses the street Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When: pedestrian notices a green light and decides to cross the street Then: pedestrian's velocity changes to [0.0, 0.0] and heading becomes close to [2.291421129116537, 0.0] And the pedestrian crosses the street at the crosswalk And the pedestrian's velocity becomes [0.0, 0.0] and heading remains close to [2.291421129116537, 0.0]
+
+Scenario: Pedestrian crosses the street Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When: pedestrian notices a green light and decides to cross the street Then: pedestrian's velocity changes to [0.0, 0.0] and heading becomes close to [2.291421129116537, 0.0] And the pedestrian crosses the street at the crosswalk And the pedestrian's velocity becomes [0.0, 0.0] and heading remains close to [2.291421129116537, 0.0]
+  Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk
+  When pedestrian notices a green light and decides to cross the street
+  Then pedestrian's velocity changes to [0.0, 0.0] and heading becomes close to [2.291421129116537, 0.0]
+  And the pedestrian crosses the street at the crosswalk
+  And the pedestrian's velocity becomes [0.0, 0.0] and heading remains close to [2.291421129116537, 0.0]
+
+Feature 49: Pedestrian interaction with moving vehicles Scenario: Pedestrian walks alongside a moving vehicle Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When a moving vehicle approaches and the pedestrian notices it Then: pedestrian stops walking and waits for the vehicle to pass by And the vehicle passes the pedestrian without any collisions And the pedestrian resumes walking alongside the vehicle And the vehicle continues moving without any deviations
+
+Scenario: Pedestrian walks alongside a moving vehicle Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When a moving vehicle approaches and the pedestrian notices it Then: pedestrian stops walking and waits for the vehicle to pass by And the vehicle passes the pedestrian without any collisions And the pedestrian resumes walking alongside the vehicle And the vehicle continues moving without any deviations
+  Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When a moving vehicle approaches and the pedestrian notices it
+  When a moving vehicle approaches and the pedestrian notices it
+  Then pedestrian stops walking and waits for the vehicle to pass by
+  And the vehicle passes the pedestrian without any collisions
+  And the pedestrian resumes walking alongside the vehicle
+  And the vehicle continues moving without any deviations
+
+Feature 50: Pedestrian interaction with static obstacles Scenario: Pedestrian avoids a static obstacle Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When a static obstacle appears in front of the pedestrian Then: pedestrian notices the obstacle and changes heading to avoid it And the pedestrian walks around the obstacle without any collisions And the pedestrian resumes the original heading These scenarios cover various aspects of pedest
+
+Scenario: Pedestrian avoids a static obstacle Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When a static obstacle appears in front of the pedestrian Then: pedestrian notices the obstacle and changes heading to avoid it And the pedestrian walks around the obstacle without any collisions And the pedestrian resumes the original heading These scenarios cover various aspects of pedest
+  Given the pedestrian is at position [677.925537109375, -2166.4951171875] and heading towards the crosswalk When a static obstacle appears in front of the pedestrian
+  When a static obstacle appears in front of the pedestrian
+  Then pedestrian notices the obstacle and changes heading to avoid it
+  And the pedestrian walks around the obstacle without any collisions
+  And the pedestrian resumes the original heading These scenarios cover various aspects of pedest
+
+================================================================================
+
+Agent 26 (PEDESTRIAN)
+----------------------------------------
+Feature 51: Pedestrian movement Scenario: Pedestrian stops at a crosswalk Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074 When: The pedestrian encounters a crosswalk and applies the "stop" command Then: The pedestrian's velocity becomes [0.0, 0.0] and they remain at position [672.8899536132812, -2170.03466796875]
+
+Scenario: Pedestrian stops at a crosswalk Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074 When: The pedestrian encounters a crosswalk and applies the "stop" command Then: The pedestrian's velocity becomes [0.0, 0.0] and they remain at position [672.8899536132812, -2170.03466796875]
+  Given The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074
+  When The pedestrian encounters a crosswalk and applies the "stop" command
+  Then The pedestrian's velocity becomes [0.0, 0.0] and they remain at position [672.8899536132812, -2170.03466796875]
+
+Feature 52: Pedestrian movement with obstacles Scenario: Pedestrian avoids an obstacle Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074 When: The pedestrian encounters an obstacle in their path Then: The pedestrian changes their heading to [0.0, 0.0] and moves to a new position [672.8899536132812, -2170.03466796875]
+
+Scenario: Pedestrian avoids an obstacle Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074 When: The pedestrian encounters an obstacle in their path Then: The pedestrian changes their heading to [0.0, 0.0] and moves to a new position [672.8899536132812, -2170.03466796875]
+  Given The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074
+  When The pedestrian encounters an obstacle in their path
+  Then The pedestrian changes their heading to [0.0, 0.0] and moves to a new position [672.8899536132812, -2170.03466796875]
+
+Feature 53: Pedestrian movement with varying speed Scenario: Pedestrian walks at varying speed Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074 When: The pedestrian applies the "walk" command and their velocity changes to [0.2,
+
+Scenario: Pedestrian walks at varying speed Given: The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074 When: The pedestrian applies the "walk" command and their velocity changes to [0.2,
+  Given The pedestrian is at position [672.8899536132812, -2170.03466796875] with velocity [0.0, 0.0] and heading 0.6284213066101074
+  When The pedestrian applies the "walk" command and their velocity changes to [0.2,
+
+================================================================================
+
+Agent 27 (PEDESTRIAN)
+----------------------------------------
+Feature 54: Pedestrian motion Scenario: Pedestrian starts walking at a crosswalk Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588 When: pedestrian starts walking Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588 Scenario: Pedestrian stops at a stop sign Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a stop sign Then: pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian crosses the street at an intersection Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters an intersection with a green light Then: pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian yielded to a vehicle and started walking again Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield Then: pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again When: pedestrian starts walking again Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+
+Scenario: Pedestrian starts walking at a crosswalk Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588 When: pedestrian starts walking Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+  Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588
+  When pedestrian starts walking
+  Then pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+
+Feature: Pedestrian motion Scenario: Pedestrian starts walking at a crosswalk Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588 When: pedestrian starts walking Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588 Scenario: Pedestrian stops at a stop sign Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a stop sign Then: pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian crosses the street at an intersection Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters an intersection with a green light Then: pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian yielded to a vehicle and started walking again Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield Then: pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again When: pedestrian starts walking again Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+
+Scenario: Pedestrian stops at a stop sign Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a stop sign Then: pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0
+  Given the pedestrian is walking and heading 1.3352797031402588
+  When pedestrian encounters a stop sign
+  Then pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0
+
+Feature: Pedestrian motion Scenario: Pedestrian starts walking at a crosswalk Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588 When: pedestrian starts walking Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588 Scenario: Pedestrian stops at a stop sign Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a stop sign Then: pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian crosses the street at an intersection Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters an intersection with a green light Then: pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian yielded to a vehicle and started walking again Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield Then: pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again When: pedestrian starts walking again Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+
+Scenario: Pedestrian crosses the street at an intersection Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters an intersection with a green light Then: pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0
+  Given the pedestrian is walking and heading 1.3352797031402588
+  When pedestrian encounters an intersection with a green light
+  Then pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0
+
+Feature: Pedestrian motion Scenario: Pedestrian starts walking at a crosswalk Given the pedestrian is at position [667.8151245117188, -2177.7236328125] and heading 1.3352797031402588 When: pedestrian starts walking Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588 Scenario: Pedestrian stops at a stop sign Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a stop sign Then: pedestrian should stop, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian crosses the street at an intersection Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters an intersection with a green light Then: pedestrian should be able to cross the street, and the pedestrian's velocity should be [0.0, 0.0] and heading should be close to 0 Scenario: Pedestrian yielded to a vehicle and started walking again Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield Then: pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again When: pedestrian starts walking again Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+
+Scenario: Pedestrian yielded to a vehicle and started walking again Given the pedestrian is walking and heading 1.3352797031402588 When: pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield Then: pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again When: pedestrian starts walking again Then: pedestrian's velocity should be [0.0, 0.0] and heading should be close to 1.3352797031402588
+  Given the pedestrian is walking and heading 1.3352797031402588
+  When pedestrian encounters a vehicle that has stopped and is waiting for the pedestrian to yield
+  Then pedestrian should yield to the vehicle, stop, and wait for the vehicle to continue before starting to walk again
+
+================================================================================
+
+Agent 28 (PEDESTRIAN)
+----------------------------------------
+Feature 55: Pedestrian walks on a sidewalk Scenario: Given the pedestrian is at a stationary position at [671.422119140625, -2180.91064453125], When: agent receives the "Start Walking" command, the pedestrian should start walking on the sidewalk. Then: The pedestrian's velocity should be close to [-1.1122522354125977, -1.943619966506958] and its heading should be close to 1.093706488609314. Scenario 2: Crossing the street at a crosswalk
+
+Scenario: Given the pedestrian is at a stationary position at [671.422119140625, -2180.91064453125], When: agent receives the "Start Walking" command, the pedestrian should start walking on the sidewalk. Then: The pedestrian's velocity should be close to [-1.1122522354125977, -1.943619966506958] and its heading should be close to 1.093706488609314. Scenario 2: Crossing the street at a crosswalk
+  Given the pedestrian is at a stationary position at [671.422119140625, -2180.91064453125],
+  When agent receives the "Start Walking" command, the pedestrian should start walking on the sidewalk.
+  Then The pedestrian's velocity should be close to [-1.1122522354125977, -1.943619966506958] and its heading should be close to 1.093706488609314. Scenario 2: Crossing the street at a crosswalk
+
+Feature 56: Pedestrian crosses the street at a crosswalk Scenario: Given the pedestrian is at a position close to [671.422119140625, -2180.91064453125], When: pedestrian notices a clear crossing, the pedestrian should look for vehicles, then start crossing the street at the crosswalk, maintaining a safe distance from vehicles. Then: The pedestrian's velocity should be close to [0, 0] and its heading should change gradually to a new heading towards [684.737509938671, -2168.247030554602]. The pedestrian should maintain a safe distance from any vehicles and obey traffic signals. Scenario 3: Avoiding obstacles
+
+Scenario: Given the pedestrian is at a position close to [671.422119140625, -2180.91064453125], When: pedestrian notices a clear crossing, the pedestrian should look for vehicles, then start crossing the street at the crosswalk, maintaining a safe distance from vehicles. Then: The pedestrian's velocity should be close to [0, 0] and its heading should change gradually to a new heading towards [684.737509938671, -2168.247030554602]. The pedestrian should maintain a safe distance from any vehicles and obey traffic signals. Scenario 3: Avoiding obstacles
+  Given the pedestrian is at a position close to [671.422119140625, -2180.91064453125],
+  When pedestrian notices a clear crossing, the pedestrian should look for vehicles, then start crossing the street at the crosswalk, maintaining a safe distance from vehicles.
+  Then start crossing the street at the crosswalk, maintaining a safe distance from vehicles. Then: The pedestrian's velocity should be close to [0, 0] and its heading should change gradually to a new heading towards [684.737509938671, -2168.247030554602]. The pedestrian should maintain a safe distance from any vehicles and obey traffic signals. Scenario 3: Avoiding obstacles
+
+Feature 57: Pedestrian avoids obstacles Scenario: Given the pedestrian is moving along a path, when an obstacle (e.g., a tree or a pole) is detected in the path, the pedestrian should look for an alternative path, avoid the obstacle, and continue moving. Then: The pedestrian's velocity should change gradually to adjust to the new path, and its heading should be
+
+Scenario: Given the pedestrian is moving along a path, when an obstacle (e.g., a tree or a pole) is detected in the path, the pedestrian should look for an alternative path, avoid the obstacle, and continue moving. Then: The pedestrian's velocity should change gradually to adjust to the new path, and its heading should be
+  Given the pedestrian is moving along a path, when an obstacle (e.g., a tree or a pole) is detected in the path, the pedestrian should look for an alternative path, avoid the obstacle, and continue moving.
+  When an obstacle (e.g., a tree or a pole) is detected in the path, the pedestrian should look for an alternative path, avoid the obstacle, and continue moving.
+  Then The pedestrian's velocity should change gradually to adjust to the new path, and its heading should be
+
+================================================================================
+
+Agent 29 (PEDESTRIAN)
+----------------------------------------
+Feature 58: Pedestrian's position Scenario: Pedestrian remains at a specific location Given: The pedestrian is located at position [668.492919921875, -2181.549560546875] When: The pedestrian does not move Then: The pedestrian remains at the same position [668.492919921875, -2181.549560546875]
+
+Scenario: Pedestrian remains at a specific location Given: The pedestrian is located at position [668.492919921875, -2181.549560546875] When: The pedestrian does not move Then: The pedestrian remains at the same position [668.492919921875, -2181.549560546875]
+  Given The pedestrian is located at position [668.492919921875, -2181.549560546875]
+  When The pedestrian does not move
+  Then The pedestrian remains at the same position [668.492919921875, -2181.549560546875]
+
+Feature 59: Pedestrian's velocity Scenario: Pedestrian changes velocity to zero Given: The pedestrian is moving with a velocity of [0.0, 0.0] When: The pedestrian applies zero force Then: The pedestrian's velocity becomes [0.0, 0.0]
+
+Scenario: Pedestrian changes velocity to zero Given: The pedestrian is moving with a velocity of [0.0, 0.0] When: The pedestrian applies zero force Then: The pedestrian's velocity becomes [0.0, 0.0]
+  Given The pedestrian is moving with a velocity of [0.0, 0.0]
+  When The pedestrian applies zero force
+  Then The pedestrian's velocity becomes [0.0, 0.0]
+
+Feature 60: Pedestrian's heading Scenario: Pedestrian changes heading direction Given: The pedestrian is moving in a heading of 0.7855009436607361 degrees When: The pedestrian changes heading direction to 180 degrees Then: The pedestrian's heading becomes 180 degrees These scenarios test the basic features of a pedestrian agent, ensuring it remains at a specific location, changes velocity to zero, and changes heading direction.
+
+Scenario: Pedestrian changes heading direction Given: The pedestrian is moving in a heading of 0.7855009436607361 degrees When: The pedestrian changes heading direction to 180 degrees Then: The pedestrian's heading becomes 180 degrees These scenarios test the basic features of a pedestrian agent, ensuring it remains at a specific location, changes velocity to zero, and changes heading direction.
+  Given The pedestrian is moving in a heading of 0.7855009436607361 degrees
+  When The pedestrian changes heading direction to 180 degrees
+  Then The pedestrian's heading becomes 180 degrees These scenarios test the basic features of a pedestrian agent, ensuring it remains at a specific location, changes velocity to zero, and changes heading direction.
+
+================================================================================
+
+Agent 30 (PEDESTRIAN)
+----------------------------------------
+Feature 61: Pedestrian movement Scenario: A pedestrian walks straight ahead Given: The pedestrian is at position [669.471923828125, -2183.37890625] The pedestrian's velocity is [0.0, 0.0] The pedestrian's heading is 0.47134169936180115 When: The pedestrian steps forward with a constant step length Then: The pedestrian's position changes according to their velocity and heading The pedestrian's velocity remains [0.0, 0.0] The pedestrian's heading remains 0.47134169936180115
+
+Scenario: A pedestrian walks straight ahead Given: The pedestrian is at position [669.471923828125, -2183.37890625] The pedestrian's velocity is [0.0, 0.0] The pedestrian's heading is 0.47134169936180115 When: The pedestrian steps forward with a constant step length Then: The pedestrian's position changes according to their velocity and heading The pedestrian's velocity remains [0.0, 0.0] The pedestrian's heading remains 0.47134169936180115
+  Given The pedestrian is at position [669.471923828125, -2183.37890625] The pedestrian's velocity is [0.0, 0.0] The pedestrian's heading is 0.47134169936180115
+  When The pedestrian steps forward with a constant step length
+  Then The pedestrian's position changes according to their velocity and heading The pedestrian's velocity remains [0.0, 0.0] The pedestrian's heading remains 0.47134169936180115
+
+================================================================================
+
+Agent 31 (PEDESTRIAN)
+----------------------------------------
+Feature 62: Pedestrian movement Scenario: Pedestrian starts walking straight Given: Pedestrian is at position [667.4828491210938, -2183.64111328125] Pedestrian has velocity [0.0, 0.0] Pedestrian's heading is 0.47134169936180115 When: Pedestrian starts walking straight (i.e., heading = 0) Then: Pedestrian's position changes according to their velocity and heading Pedestrian's velocity remains [0.0, 0.0] Pedestrian's heading becomes 0 (since they started walking straight) Expected results: The pedestrian moves in a straight line, as indicated by their heading becoming 0. The pedestrian's position changes according to their velocity and heading, while their velocity remains constant.
+
+Scenario: Pedestrian starts walking straight Given: Pedestrian is at position [667.4828491210938, -2183.64111328125] Pedestrian has velocity [0.0, 0.0] Pedestrian's heading is 0.47134169936180115 When: Pedestrian starts walking straight (i.e., heading = 0) Then: Pedestrian's position changes according to their velocity and heading Pedestrian's velocity remains [0.0, 0.0] Pedestrian's heading becomes 0 (since they started walking straight) Expected results: The pedestrian moves in a straight line, as indicated by their heading becoming 0. The pedestrian's position changes according to their velocity and heading, while their velocity remains constant.
+  Given Pedestrian is at position [667.4828491210938, -2183.64111328125] Pedestrian has velocity [0.0, 0.0] Pedestrian's heading is 0.47134169936180115
+  When Pedestrian starts walking straight (i.e., heading = 0)
+  Then Pedestrian's position changes according to their velocity and heading Pedestrian's velocity remains [0.0, 0.0] Pedestrian's heading becomes 0 (since they started walking straight) Expected results: The pedestrian moves in a straight line, as indicated by their heading becoming 0. The pedestrian's position changes according to their velocity and heading, while their velocity remains constant.
+
+================================================================================
+
+Agent 32 (PEDESTRIAN)
+----------------------------------------
+Feature 63: Pedestrian movement Scenario: Pedestrian at rest Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: agent checks its position and velocity Then: agent should have the position [665.3422241210938, -2185.625] and velocity [0.0, 0.0] Scenario: Pedestrian starts walking Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a non-zero velocity Then: pedestrian's velocity should change to [0.0, 0.0] and its heading should change to [0.00010278765694238245] Scenario: Pedestrian changes heading Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a new heading Then: pedestrian's heading should change to [new_heading] And the pedestrian's position should remain at [665.3422241210938, -2185.625] These scenarios cover the basic movements of a pedestrian, allowing for testing of the agent's behavior when it comes to position, velocity, and heading.
+
+Scenario: Pedestrian at rest Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: agent checks its position and velocity Then: agent should have the position [665.3422241210938, -2185.625] and velocity [0.0, 0.0]
+  Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245
+  When agent checks its position and velocity
+  Then agent should have the position [665.3422241210938, -2185.625] and velocity [0.0, 0.0]
+
+Feature: Pedestrian movement Scenario: Pedestrian at rest Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: agent checks its position and velocity Then: agent should have the position [665.3422241210938, -2185.625] and velocity [0.0, 0.0] Scenario: Pedestrian starts walking Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a non-zero velocity Then: pedestrian's velocity should change to [0.0, 0.0] and its heading should change to [0.00010278765694238245] Scenario: Pedestrian changes heading Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a new heading Then: pedestrian's heading should change to [new_heading] And the pedestrian's position should remain at [665.3422241210938, -2185.625] These scenarios cover the basic movements of a pedestrian, allowing for testing of the agent's behavior when it comes to position, velocity, and heading.
+
+Scenario: Pedestrian starts walking Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a non-zero velocity Then: pedestrian's velocity should change to [0.0, 0.0] and its heading should change to [0.00010278765694238245]
+  Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245
+  When pedestrian applies a non-zero velocity
+  Then pedestrian's velocity should change to [0.0, 0.0] and its heading should change to [0.00010278765694238245]
+
+Feature: Pedestrian movement Scenario: Pedestrian at rest Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: agent checks its position and velocity Then: agent should have the position [665.3422241210938, -2185.625] and velocity [0.0, 0.0] Scenario: Pedestrian starts walking Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a non-zero velocity Then: pedestrian's velocity should change to [0.0, 0.0] and its heading should change to [0.00010278765694238245] Scenario: Pedestrian changes heading Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a new heading Then: pedestrian's heading should change to [new_heading] And the pedestrian's position should remain at [665.3422241210938, -2185.625] These scenarios cover the basic movements of a pedestrian, allowing for testing of the agent's behavior when it comes to position, velocity, and heading.
+
+Scenario: Pedestrian changes heading Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245 When: pedestrian applies a new heading Then: pedestrian's heading should change to [new_heading] And the pedestrian's position should remain at [665.3422241210938, -2185.625] These scenarios cover the basic movements of a pedestrian, allowing for testing of the agent's behavior when it comes to position, velocity, and heading.
+  Given the pedestrian is at rest at position [665.3422241210938, -2185.625] with zero velocity and heading 0.00010278765694238245
+  When pedestrian applies a new heading
+  Then pedestrian's heading should change to [new_heading]
+  And the pedestrian's position should remain at [665.3422241210938, -2185.625] These scenarios cover the basic movements of a pedestrian, allowing for testing of the agent's behavior when it comes to position, velocity, and heading.
+
+================================================================================
+
+Agent 33 (PEDESTRIAN)
+----------------------------------------
+Feature 64: Pedestrian movement Scenario: Pedestrian staying still Given: Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606 When: No actions are taken by the pedestrian or any other agents Then: The pedestrian's position remains at [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606
+
+Scenario: Pedestrian staying still Given: Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606 When: No actions are taken by the pedestrian or any other agents Then: The pedestrian's position remains at [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606
+  Given Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606
+  When No actions are taken by the pedestrian or any other agents
+  Then The pedestrian's position remains at [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606
+
+Feature 65: Pedestrian movement Scenario: Pedestrian moving forward Given: Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606 When: The pedestrian decides to move forward Then: The pedestrian's velocity becomes non-zero and points in the positive x-direction The pedestrian's new position is approximately at [667.067260742188, -2191.3125] after some small adjustments The pedestrian's heading remains at 1.413819432258606
+
+Scenario: Pedestrian moving forward Given: Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606 When: The pedestrian decides to move forward Then: The pedestrian's velocity becomes non-zero and points in the positive x-direction The pedestrian's new position is approximately at [667.067260742188, -2191.3125] after some small adjustments The pedestrian's heading remains at 1.413819432258606
+  Given Pedestrian is at position [665.2067260742188, -2189.3125] with zero velocity and heading 1.413819432258606
+  When The pedestrian decides to move forward
+  Then The pedestrian's velocity becomes non-zero and points in the positive x-direction The pedestrian's new position is approximately at [667.067260742188, -2191.3125] after some small adjustments The pedestrian's heading remains at 1.413819432258606
+
+================================================================================
+
+Agent 34 (PEDESTRIAN)
+----------------------------------------
+Feature 66: Pedestrian movement Scenario: Pedestrian walks in a straight line Given: A pedestrian is at position [659.7926025390625, -2194.46484375] with velocity [0.0, 0.0] and heading 1.1782000064849854. When: The pedestrian continues walking in a straight line. Then: The pedestrian's position should update according to their constant velocity in the given heading.
+
+Scenario: Pedestrian walks in a straight line Given: A pedestrian is at position [659.7926025390625, -2194.46484375] with velocity [0.0, 0.0] and heading 1.1782000064849854. When: The pedestrian continues walking in a straight line. Then: The pedestrian's position should update according to their constant velocity in the given heading.
+  Given A pedestrian is at position [659.7926025390625, -2194.46484375] with velocity [0.0, 0.0] and heading 1.1782000064849854.
+  When The pedestrian continues walking in a straight line.
+  Then The pedestrian's position should update according to their constant velocity in the given heading.
+
+================================================================================
+
+Agent 35 (PEDESTRIAN)
+----------------------------------------
+Feature 67: Pedestrian Movement Scenario: Pedestrian Crosses Street Given: The pedestrian is at position [653.3523559570312, -2200.55224609375] with a velocity of [0.0, 0.0] and heading of 0.3928018808364868. The street has a crosswalk at position [653.3523559570312, -2198.55224609375]. When: The pedestrian steps onto the crosswalk. Then: The pedestrian's velocity should be updated to [0.2, 0.2] and heading to 0.0. The agent should be at position [653.3523559570312, -2198.55224609375] after a small time step. The street should be marked as "pedestrian has crossed" at the crosswalk position.
+
+Scenario: Pedestrian Crosses Street Given: The pedestrian is at position [653.3523559570312, -2200.55224609375] with a velocity of [0.0, 0.0] and heading of 0.3928018808364868. The street has a crosswalk at position [653.3523559570312, -2198.55224609375]. When: The pedestrian steps onto the crosswalk. Then: The pedestrian's velocity should be updated to [0.2, 0.2] and heading to 0.0. The agent should be at position [653.3523559570312, -2198.55224609375] after a small time step. The street should be marked as "pedestrian has crossed" at the crosswalk position.
+  Given The pedestrian is at position [653.3523559570312, -2200.55224609375] with a velocity of [0.0, 0.0] and heading of 0.3928018808364868. The street has a crosswalk at position [653.3523559570312, -2198.55224609375].
+  When The pedestrian steps onto the crosswalk.
+  Then The pedestrian's velocity should be updated to [0.2, 0.2] and heading to 0.0. The agent should be at position [653.3523559570312, -2198.55224609375] after a small time step. The street should be marked as "pedestrian has crossed" at the crosswalk position.
+
+================================================================================
+
+Agent 36 (PEDESTRIAN)
+----------------------------------------
+Feature 68: Pedestrian motion Scenario: Pedestrian stays at rest Given: Pedestrian is at position [650.3146362304688, -2204.771240234375] with zero velocity and heading 1.0211204290390015 When: The agent does not perform any actions (i.e., no acceleration, deceleration, or changes in heading) Then: The pedestrian's position remains at [650.3146362304688, -2204.771240234375] and their velocity remains zero, and their heading remains 1.0211204290390015
+
+Scenario: Pedestrian stays at rest Given: Pedestrian is at position [650.3146362304688, -2204.771240234375] with zero velocity and heading 1.0211204290390015 When: The agent does not perform any actions (i.e., no acceleration, deceleration, or changes in heading) Then: The pedestrian's position remains at [650.3146362304688, -2204.771240234375] and their velocity remains zero, and their heading remains 1.0211204290390015
+  Given Pedestrian is at position [650.3146362304688, -2204.771240234375] with zero velocity and heading 1.0211204290390015
+  When The agent does not perform any actions (i.e., no acceleration, deceleration, or changes in heading)
+  Then The pedestrian's position remains at [650.3146362304688, -2204.771240234375] and their velocity remains zero, and their heading remains 1.0211204290390015
+
+================================================================================
+
+Agent 37 (PEDESTRIAN)
+----------------------------------------
+Feature 69: Pedestrian's Position Scenario: Pedestrian in the correct location Given: The pedestrian is located at position [652.2408447265625, -2203.578125] When: The agent checks the pedestrian's position Then: The agent finds the pedestrian at the correct location
+
+Scenario: Pedestrian in the correct location Given: The pedestrian is located at position [652.2408447265625, -2203.578125] When: The agent checks the pedestrian's position Then: The agent finds the pedestrian at the correct location
+  Given The pedestrian is located at position [652.2408447265625, -2203.578125]
+  When The agent checks the pedestrian's position
+  Then The agent finds the pedestrian at the correct location
+
+Feature 70: Pedestrian's Velocity Scenario: Pedestrian is stationary Given: The pedestrian's velocity is [0.0, 0.0] When: The agent checks the pedestrian's velocity Then: The agent finds that the pedestrian is stationary
+
+Scenario: Pedestrian is stationary Given: The pedestrian's velocity is [0.0, 0.0] When: The agent checks the pedestrian's velocity Then: The agent finds that the pedestrian is stationary
+  Given The pedestrian's velocity is [0.0, 0.0]
+  When The agent checks the pedestrian's velocity
+  Then The agent finds that the pedestrian is stationary
+
+Feature 71: Pedestrian's Heading Scenario: Pedestrian is facing the correct direction Given: The pedestrian's heading is 0.8640407919883728 When: The agent checks the pedestrian's heading Then: The agent finds that the pedestrian is facing the correct direction Please note that these scenarios are based on the given position, velocity, and heading. If any of these properties change, the test scenarios should be updated accordingly.
+
+Scenario: Pedestrian is facing the correct direction Given: The pedestrian's heading is 0.8640407919883728 When: The agent checks the pedestrian's heading Then: The agent finds that the pedestrian is facing the correct direction Please note that these scenarios are based on the given position, velocity, and heading. If any of these properties change, the test scenarios should be updated accordingly.
+  Given The pedestrian's heading is 0.8640407919883728
+  When The agent checks the pedestrian's heading
+  Then The agent finds that the pedestrian is facing the correct direction Please note that these scenarios are based on the given position, velocity, and heading. If any of these properties change, the test scenarios should be updated accordingly.
+
+================================================================================
+
+Agent 38 (PEDESTRIAN)
+----------------------------------------
+Feature 72: Pedestrian Movement Scenario: Crossing the street Given the pedestrian is at the corner of Main Street and Maple Avenue When: pedestrian steps onto the crosswalk Then: pedestrian should be moving towards the intersection And the traffic light should be red
+
+Scenario: Crossing the street Given the pedestrian is at the corner of Main Street and Maple Avenue When: pedestrian steps onto the crosswalk Then: pedestrian should be moving towards the intersection And the traffic light should be red
+  Given the pedestrian is at the corner of Main Street and Maple Avenue
+  When pedestrian steps onto the crosswalk
+  Then pedestrian should be moving towards the intersection
+  And the traffic light should be red
+
+Feature 73: Pedestrian Waiting at a Crosswalk Scenario: Waiting for the light to change Given the pedestrian is at the corner of Main Street and Maple Avenue When: traffic light is red Then: pedestrian should be waiting at the crosswalk And the traffic light should be displaying a countdown
+
+Scenario: Waiting for the light to change Given the pedestrian is at the corner of Main Street and Maple Avenue When: traffic light is red Then: pedestrian should be waiting at the crosswalk And the traffic light should be displaying a countdown
+  Given the pedestrian is at the corner of Main Street and Maple Avenue
+  When traffic light is red
+  Then pedestrian should be waiting at the crosswalk
+  And the traffic light should be displaying a countdown
+
+Feature 74: Pedestrian Intersection Awareness Scenario: Intersection crossing Given the pedestrian is at the intersection of Main Street and Maple Avenue When: pedestrian sees a car approaching from the opposite direction Then: pedestrian should glance at the car And start to move towards the sidewalk And the car should stop before crossing the pedestrian
+
+Scenario: Intersection crossing Given the pedestrian is at the intersection of Main Street and Maple Avenue When: pedestrian sees a car approaching from the opposite direction Then: pedestrian should glance at the car And start to move towards the sidewalk And the car should stop before crossing the pedestrian
+  Given the pedestrian is at the intersection of Main Street and Maple Avenue
+  When pedestrian sees a car approaching from the opposite direction
+  Then pedestrian should glance at the car
+  And start to move towards the sidewalk
+  And the car should stop before crossing the pedestrian
+
+Feature 75: Pedestrian Headings Scenario: Changing headings Given the pedestrian is facing north at the corner of Main Street and Maple Avenue When: pedestrian changes heading to face east Then: pedestrian should rotate their head And their heading should be east These scenarios aim to test various aspects of a pedestrian agent's behavior, such as movement, waiting at crosswalks, intersection awareness, and headings. The given conditions and actions are just examples, and you can extend them to create more comprehensive test scenarios.
+
+Scenario: Changing headings Given the pedestrian is facing north at the corner of Main Street and Maple Avenue When: pedestrian changes heading to face east Then: pedestrian should rotate their head And their heading should be east These scenarios aim to test various aspects of a pedestrian agent's behavior, such as movement, waiting at crosswalks, intersection awareness, and headings. The given conditions and actions are just examples, and you can extend them to create more comprehensive test scenarios.
+  Given the pedestrian is facing north at the corner of Main Street and Maple Avenue
+  When pedestrian changes heading to face east
+  Then pedestrian should rotate their head
+  And their heading should be east These scenarios aim to test various aspects of a pedestrian agent's behavior, such as movement, waiting at crosswalks, intersection awareness, and headings. The given conditions and actions are just examples, and you can extend them to create more comprehensive test scenarios.
+
+================================================================================
